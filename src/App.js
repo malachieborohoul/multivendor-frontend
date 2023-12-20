@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-// functiofunctiofunctiofuncti
+// functiofunctiofunctiofunct
 function App() {
   return (
     <>
