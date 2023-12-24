@@ -130,7 +130,7 @@ function App() {
             </button>
           </div>
           {/* Rating and Reviews End */}
-          {/*  RatingRatingRatingRa*/}
+          {/*  RatingRatingRatingR*/}
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top mt-5">
             <div className="col-md-4 d-flex align-items-center">
               <a href="/" className="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
