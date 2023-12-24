@@ -40,13 +40,20 @@ function App() {
       </nav>
       <main className="mt-4">
         <div className="container">
+          <h3>Latest Products</h3>
           <div className="row">
             <div className="col-12 col-md-3 mb-2">
-              <div className="card">
+              <div className="card shadow">
                 <img src={logo} className="card-img-top" alt="..." />
+                <hr/>
                 <div className="card-body">
-                  <h5 className="card-title">Product title</h5>
-                  <div className="card-footer"></div>
+                  <h4 className="card-title">Product title</h4>
+                  <h5 className="card-title text-muted">Price Rs. 500</h5>
+                  <div className="card-footer">
+                    
+                    <button title="Add to cart" className="btn btn-success btn-sm"><i className="fa fa-cart-plus" aria-hidden="true"></i></button>
+                    <button title="Add to Wishlist" className="btn btn-danger btn-sm ms-2"><i className="fa fa-heart" aria-hidden="true"></i></button>
+                  </div>
                 </div>
               </div>
             </div>
