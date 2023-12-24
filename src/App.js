@@ -33,6 +33,10 @@ function App() {
           {/* Product Box End*/}
 
 
+          {/* Rating and Reviews */}
+          {/* Rating and Reviews End */}
+
+
           </div>
 
 
