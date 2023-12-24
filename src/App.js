@@ -40,8 +40,9 @@ function App() {
       </nav>
       <main className="mt-4">
         <div className="container">
-          <h3>Latest Products</h3>
+          <h3 className="mb-4">Latest Products</h3>
           <div className="row">
+            {/* Product Box */}
             <div className="col-12 col-md-3 mb-2">
               <div className="card shadow">
                 <img src={logo} className="card-img-top" alt="..." />
@@ -57,6 +58,8 @@ function App() {
                 </div>
               </div>
             </div>
+            {/* Product Box End*/}
+
           </div>
         </div>
       </main>
