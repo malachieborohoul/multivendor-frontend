@@ -1,3 +1,5 @@
+import {Routes, Route, Link} from 'react-router-dom'
+
 import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -10,7 +12,11 @@ function App() {
   return (
     <>
       <Header/> 
-      <Home/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+         
+        
+      </Routes>
       <Footer/>
 
     </>
