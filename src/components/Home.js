@@ -1,5 +1,4 @@
 import logo from "../logo.svg";
-import Footer from "./Footer";
 
 function Home(){
     return(
@@ -126,7 +125,6 @@ function Home(){
           </div>
           {/* Rating and Reviews End */}
          
-         <Footer/>
 
 
 
