@@ -40,9 +40,11 @@ function App() {
       </nav>
       <main className="mt-4">
         <div className="container">
+
           <h3 className="mb-4">Latest Products <a  className="float-end btn btn-sm btn-dark mt-0 " href="#">View all products <i className="fa fa-arrow-right-long mt-2" aria-hidden="true"></i></a></h3>
           <div className="row">
-            {/* Product Box */}
+          {/* Product Box */}
+
             <div className="col-12 col-md-3 mb-3">
               <div className="card shadow">
                 <img src={logo} className="card-img-top" alt="..." />
@@ -58,9 +60,34 @@ function App() {
                 </div>
               </div>
             </div>
-            {/* Product Box End*/}
+          {/* Product Box End*/}
+
 
           </div>
+
+
+
+    <h3 className="mb-4">Popular Categories <a  className="float-end btn btn-sm btn-dark mt-0 " href="#">View all Categories <i className="fa fa-arrow-right-long mt-2" aria-hidden="true"></i></a></h3>
+          <div className="row">
+          {/* Category Box */}
+
+            <div className="col-12 col-md-3 mb-3">
+              <div className="card shadow">
+                <img src={logo} className="card-img-top" alt="..." />
+                <hr/>
+                <div className="card-body">
+                  <h4 className="card-title">Category title</h4>
+                  <h5 className="card-title text-muted">Price Rs. 500</h5>
+                  <div className="card-footer">
+                    
+                    Product Downloads: 2344 
+                  </div>
+                </div>
+              </div>
+            </div>
+          {/* Category Box End*/}
+          </div>
+
         </div>
       </main>
     </>
