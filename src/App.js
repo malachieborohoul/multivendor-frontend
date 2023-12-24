@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
 // 
 function App() {
   return (
@@ -45,7 +46,7 @@ function App() {
                 <img src={logo} className="card-img-top" alt="..." />
                 <div className="card-body">
                   <h5 className="card-title">Product title</h5>
-                  
+                  <div className="card-footer"></div>
                 </div>
               </div>
             </div>
