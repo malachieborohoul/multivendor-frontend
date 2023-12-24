@@ -40,10 +40,10 @@ function App() {
       </nav>
       <main className="mt-4">
         <div className="container">
-          <h3 className="mb-4">Latest Products</h3>
+          <h3 className="mb-4">Latest Products <a  className="float-end btn btn-sm btn-dark mt-0 " href="#">View all products <i className="fa fa-arrow-right-long mt-2" aria-hidden="true"></i></a></h3>
           <div className="row">
             {/* Product Box */}
-            <div className="col-12 col-md-3 mb-2">
+            <div className="col-12 col-md-3 mb-3">
               <div className="card shadow">
                 <img src={logo} className="card-img-top" alt="..." />
                 <hr/>
