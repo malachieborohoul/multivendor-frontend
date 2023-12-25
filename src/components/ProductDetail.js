@@ -24,9 +24,10 @@ function ProductDetail(props) {
           </p>
           <h5 className="card-title">Price Rs 500</h5>
           <p className="mt-3">
-            <button title="Add to cart" className="btn btn-primary btn-sm"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to Cart</button>
-            <button title="Add to cart" className="btn btn-success btn-sm ms-2"><i className="fa fa-bag-shopping" aria-hidden="true"></i> Buy Now</button>
-            <button title="Add to Wishlist" className="btn btn-danger btn-sm ms-2"><i className="fa fa-heart" aria-hidden="true"></i> Wishlist</button>
+            <Link title="Add to cart" target="_blank" className="btn btn-dark ms-1"><i className="fa fa-cart-plus" aria-hidden="true"></i> Demo</Link>
+            <Link title="Add to cart" className="btn btn-primary ms-1"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to Cart</Link>
+            <Link title="Add to cart" className="btn btn-success ms-1 "><i className="fa fa-bag-shopping" aria-hidden="true"></i> Buy Now</Link>
+            <Link title="Add to Wishlist" className="btn btn-danger ms-1 "><i className="fa fa-heart" aria-hidden="true"></i> Wishlist</Link>
           </p>
           <hr/>
           <div className="producttags">
