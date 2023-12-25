@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Categories from './components/Categories';
 import CategoryProducts from './components/CategoryProducts';
 import AllProducts from './components/AllProducts';
+import ProductDetail from './components/ProductDetail';
 // 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/categories' element={<Categories/>}/>
         <Route path='/categories/:slug/:id' element={<CategoryProducts/>}/>
         <Route path='/products' element={<AllProducts/>}/>
+        <Route path='/products/:id' element={<ProductDetail/>}/>
          
         
       </Routes>
