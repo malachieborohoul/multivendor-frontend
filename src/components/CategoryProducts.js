@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 
-function Categories(params) {
+function CategoryProducts(params) {
     return (
     <section className="container mt-4">
-        <h3 className="mb-4">Popular Categories </h3>
+        <h3 className="mb-4">Category Product List </h3>
       <div className="row">
       {/* Category Box */}
 
@@ -28,4 +28,4 @@ function Categories(params) {
     )
 }
 
-export default Categories;
+export default CategoryProducts;
