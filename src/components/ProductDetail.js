@@ -1,12 +1,43 @@
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
+import SingleProduct from "./SingleProduct";
 
 function ProductDetail(props) {
   return (
     <section className="container mt-4">
       <div className="row">
         <div className="col-4">
-          <img src={logo} className="card-img-top" alt="..." />
+        <div id="productThumbnailsSlider" className="carousel carousel-dark slide  border" data-bs-ride="true ">
+        <div className="carousel-indicators">
+          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div className="row">
+              <img src={logo} className="img-thumbnail mb-5" alt="..." />
+               
+
+              </div>
+            </div>
+            <div className="carousel-item">
+            <div className="row">
+            <img src={logo} className="img-thumbnail mb-5" alt="..." />
+              
+
+              </div>
+            </div>
+            <div className="carousel-item">
+            <div className="row">
+            <img src={logo} className="img-thumbnail mb-5" alt="..." />
+                
+
+              </div>
+            </div>
+          </div>
+        
+        </div>
         </div>
         <div className="col-8">
           <h3>Product Title</h3>
@@ -42,6 +73,52 @@ function ProductDetail(props) {
        
         </div>
       </div>
+      {/* Related Products */}
+      <h3 className="mt-4 mb-2" >Related Products</h3>
+      <div id="productThumbnailsSlider" className="carousel carousel-dark slide  border" data-bs-ride="true ">
+        <div className="carousel-indicators">
+          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div className="row">
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+
+              </div>
+            </div>
+            <div className="carousel-item">
+            <div className="row">
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+
+              </div>
+            </div>
+            <div className="carousel-item">
+            <div className="row">
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/>
+
+              </div>
+            </div>
+          </div>
+          {/* <button className="carousel-control-prev" type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button> */}
+        </div>
     </section>
   );
 }
