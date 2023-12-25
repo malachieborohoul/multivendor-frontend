@@ -2,8 +2,8 @@ import logo from "../logo.svg";
 
 function Categories(params) {
     return (
-    <section className="container">
-        <h3 className="mb-4">Popular Categories <a  className="float-end btn btn-sm btn-dark mt-0 " href="#">View all Categories <i className="fa fa-arrow-right-long mt-2" aria-hidden="true"></i></a></h3>
+    <section className="container mt-4">
+        <h3 className="mb-4">Popular Categories </h3>
       <div className="row">
       {/* Category Box */}
 
