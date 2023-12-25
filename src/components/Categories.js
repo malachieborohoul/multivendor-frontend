@@ -13,7 +13,7 @@ function Categories(params) {
             <img src={logo} className="card-img-top" alt="..." />
             <hr/>
             <div className="card-body">
-              <h4 className="card-title"><Link  to="">Category title</Link></h4>
+              <h4 className="card-title"><Link  to="/categories/python/1">Category title</Link></h4>
               <h5 className="card-title text-muted">Price Rs. 500</h5>
               <div className="card-footer">
                 
@@ -24,6 +24,24 @@ function Categories(params) {
         </div>
       {/* Category Box End*/}
       </div>
+      
+      <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
     </section>
     )
 }
