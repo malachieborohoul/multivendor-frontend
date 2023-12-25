@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import Categories from "./Categories";
 
@@ -6,7 +7,7 @@ function Home(){
         <main className="mt-4">
         <div className="container">
 
-          <h3 className="mb-4">Latest Products <a  className="float-end btn btn-sm btn-dark mt-0 " href="#">View all products <i className="fa fa-arrow-right-long mt-2" aria-hidden="true"></i></a></h3>
+          <h3 className="mb-4">Latest Products <Link  className="float-end btn btn-sm btn-dark mt-0 " to="/products">View all products <i className="fa fa-arrow-right-long mt-2" aria-hidden="true"></i></Link></h3>
           <div className="row">
           {/* Product Box */}
 
