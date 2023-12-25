@@ -39,14 +39,14 @@ function Header() {
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
+                    My Account
                 </a>
                 <ul class="dropdown-menu">
-                    <li><Link class="dropdown-item" to=" register">Register</Link></li>
-                    <li><Link class="dropdown-item" to="#">Login</Link></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><Link class="dropdown-item" to="register">Register</Link></li>
+                    <li><Link class="dropdown-item" to="login">Login</Link></li>
                     <li><hr class="dropdown-divider"/></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li><Link class="dropdown-item" to="register">Dashboard</Link></li>
+                    <li><Link class="dropdown-item" to="login">Logout</Link></li>
                 </ul>
                 </li> 
             </ul>
