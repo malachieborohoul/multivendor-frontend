@@ -4,7 +4,7 @@ function Header() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container">
-          <Link className="navbar-brand" to="#">
+          <Link className="navbar-brand" to="/">
             Python Market Place
           </Link>
           <button
@@ -28,6 +28,12 @@ function Header() {
               <li className="nav-item">
                 <Link className="nav-link" to="/categories">
                   Categories
+                </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/checkout">
+                  My Cart (4)
                 </Link>
               </li>
             </ul>
