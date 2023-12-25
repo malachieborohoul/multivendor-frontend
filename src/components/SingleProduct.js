@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 
-function SingleProduct(params) {
+function SingleProduct(props) {
     return (
    
 
@@ -10,7 +10,7 @@ function SingleProduct(params) {
                 <img src={logo} className="card-img-top" alt="..." />
                 <hr/>
                 <div className="card-body">
-                  <h4 className="card-title">Product title</h4>
+                  <h4 className="card-title">{props.title}</h4>
                   <h5 className="card-title text-muted">Price Rs. 500</h5>
                   <div className="card-footer">
                     
