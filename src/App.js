@@ -7,6 +7,7 @@ import "bootstrap/dist/js/bootstrap.js";
 import Header from './components/Header'
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import Categories from './components/Categories';
 // 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header/> 
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/categories' element={<Categories/>}/>
          
         
       </Routes>
