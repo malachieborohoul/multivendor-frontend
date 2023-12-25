@@ -14,6 +14,7 @@ import ProductDetail from './components/ProductDetail';
 import Checkout from './components/Checkout';
 import Register from './components/Register';
 import Login from './components/Login';
+import Dashboard from './components/Dashboard';
 // 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/dashboard' element={<Dashboard/>}/>
 
          
         

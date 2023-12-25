@@ -45,8 +45,8 @@ function Header() {
                     <li><Link class="dropdown-item" to="register">Register</Link></li>
                     <li><Link class="dropdown-item" to="login">Login</Link></li>
                     <li><hr class="dropdown-divider"/></li>
-                    <li><Link class="dropdown-item" to="register">Dashboard</Link></li>
-                    <li><Link class="dropdown-item" to="login">Logout</Link></li>
+                    <li><Link class="dropdown-item" to="dashboard">Dashboard</Link></li>
+                    <li><Link class="dropdown-item" to="logout">Logout</Link></li>
                 </ul>
                 </li> 
             </ul>
