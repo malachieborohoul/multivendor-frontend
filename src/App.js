@@ -12,6 +12,7 @@ import CategoryProducts from './components/CategoryProducts';
 import AllProducts from './components/AllProducts';
 import ProductDetail from './components/ProductDetail';
 import Checkout from './components/Checkout';
+import Register from './components/Register';
 // 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/products' element={<AllProducts/>}/>
         <Route path='/products/:slug/:id' element={<ProductDetail/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
+        <Route path='/register' element={<Register/>}/>
 
          
         
