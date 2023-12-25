@@ -7,7 +7,10 @@ function SingleProduct(props) {
 
             <div className="col-12 col-md-3 mb-3">
               <div className="card shadow">
-                <img src={logo} className="card-img-top" alt="..." />
+                <Link to="/products/python/1">
+                  <img src={logo} className="card-img-top" alt="..." />
+                </Link>
+                
                 <hr/>
                 <div className="card-body">
                   <h4 className="card-title">{props.title}</h4>
