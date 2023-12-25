@@ -4,9 +4,9 @@ function Header() {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="#">
             Python Market Place
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
