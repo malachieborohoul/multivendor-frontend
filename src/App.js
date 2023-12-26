@@ -15,6 +15,7 @@ import Checkout from './components/Checkout';
 import Login from './components/Customer/Login';
 import Register from './components/Customer/Register';
 import Dashboard from './components/Customer/Dashboard';
+import Orders from './components/Customer/Orders';
 // 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
         <Route path='/customer/register' element={<Register/>}/>
         <Route path='/customer/login' element={<Login/>}/>
         <Route path='/customer/dashboard' element={<Dashboard/>}/>
-        <Route path='/customer/orders' element={<Dashboard/>}/>
+        <Route path='/customer/orders' element={<Orders/>}/>
 
          
         
