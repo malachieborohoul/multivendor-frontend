@@ -12,9 +12,9 @@ import CategoryProducts from './components/CategoryProducts';
 import AllProducts from './components/AllProducts';
 import ProductDetail from './components/ProductDetail';
 import Checkout from './components/Checkout';
-import Register from './components/Register';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+import Login from './components/Customer/Login';
+import Register from './components/Customer/Register';
+import Dashboard from './components/Customer/Dashboard';
 // 
 function App() {
   return (
@@ -27,9 +27,10 @@ function App() {
         <Route path='/products' element={<AllProducts/>}/>
         <Route path='/products/:slug/:id' element={<ProductDetail/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
-        <Route path='/register' element={<Register/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/dashboard' element={<Dashboard/>}/>
+        <Route path='/customer/register' element={<Register/>}/>
+        <Route path='/customer/login' element={<Login/>}/>
+        <Route path='/customer/dashboard' element={<Dashboard/>}/>
+        <Route path='/customer/orders' element={<Dashboard/>}/>
 
          
         

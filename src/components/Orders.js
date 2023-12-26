@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
-import Sidebar from "./Sidebar";
+import Sidebar from "./Customer/Sidebar";
 
 function Dashboard(props) {
     return (
