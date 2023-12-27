@@ -3,19 +3,26 @@ import logo from "../logo.svg";
 import SingleProduct from "./SingleProduct";
 
 function AllProducts(params) {
+  let products=[
+    {
+      "title":"Python",
+      "price":100
+    },
+    {
+      "title":"Django",
+      "price":120
+    }
+]
     return (
     <section className="container mt-4">
         <h3 className="mb-4"><span className="text-success">Python</span> Products</h3>
       <div className="row">
             {/* Product Box */}
-
-           <SingleProduct title="Django"/>
-           <SingleProduct/>
-           <SingleProduct/>
-           <SingleProduct/>
-           <SingleProduct/>
-           <SingleProduct/>
-           <SingleProduct/> 
+          {products.map((product)=>{
+            return <SingleProduct product={product}/>
+          })}
+           
+          
           {/* Product Box End*/} 
       </div>
 

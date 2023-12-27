@@ -13,8 +13,8 @@ function SingleProduct(props) {
                 
                 <hr/>
                 <div className="card-body">
-                  <h4 className="card-title">{props.title}</h4>
-                  <h5 className="card-title text-muted">Price Rs. 500</h5>
+                  <h4 className="card-title">{props.product.title}</h4>
+                  <h5 className="card-title text-muted">Price Rs. {props.product.price}</h5>
                   <div className="card-footer">
                     
                     <button title="Add to cart" className="btn btn-success btn-sm"><i className="fa fa-cart-plus" aria-hidden="true"></i></button>
