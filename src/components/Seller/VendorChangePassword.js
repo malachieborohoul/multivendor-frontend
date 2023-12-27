@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 import Sidebar from "./SellerSidebar";
 
-function ChangePassword(props) {
+function VendorChangePassword(props) {
     return (
       <div className="container mt-4 ">
       <div className="row">
@@ -36,4 +36,4 @@ function ChangePassword(props) {
     )
 }
 
-export default ChangePassword;
+export default VendorChangePassword;

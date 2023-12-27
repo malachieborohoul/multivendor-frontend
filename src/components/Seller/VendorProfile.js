@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 import Sidebar from "./Sidebar";
 
-function Profile(props) {
+function VendorProfile(props) {
     return (
       <div className="container mt-4 ">
       <div className="row">
@@ -48,4 +48,4 @@ function Profile(props) {
     )
 }
 
-export default Profile;
+export default VendorProfile;

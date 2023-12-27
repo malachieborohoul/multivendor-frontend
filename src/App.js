@@ -66,6 +66,10 @@ function App() {
         <Route path='/seller/orders' element={<VendorOrders/>}/>
         <Route path='/seller/customers' element={<Customers/>}/>
         <Route path='/seller/reports' element={<Reports/>}/>
+        <Route path='/seller/change-password' element={<Ven/>}/>
+        <Route path='/seller/profile' element={<Profile/>}/>
+
+
 
         
 
