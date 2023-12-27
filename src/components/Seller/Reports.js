@@ -16,8 +16,9 @@ function Reports(props) {
                     <div className="col-md-4 mb-2">
                       <div className="card">
                         <div className="card-body text-center">
-                          <h4>Total Products</h4>
-                          <h5><Link>123</Link> </h5>
+                          <h4>Daily Reports</h4>
+                          <h5><Link className="btn btn-info" >View</Link> </h5>
+
 
                         </div>
                       </div>
@@ -26,8 +27,9 @@ function Reports(props) {
                     <div className="col-md-4 mb-2">
                       <div className="card">
                         <div className="card-body text-center">
-                          <h4>Total Orders</h4>
-                          <h5><Link>123</Link> </h5>
+                          <h4>Monthly Reports</h4>
+                          <h5><Link className="btn btn-info" >View</Link> </h5>
+
                         </div>
                       </div>
                     </div>
@@ -36,8 +38,8 @@ function Reports(props) {
                     <div className="col-md-4 mb-2">
                       <div className="card">
                         <div className="card-body text-center">
-                          <h4>Total Customers</h4>
-                          <h5><Link>123</Link> </h5>
+                          <h4>Yearly Reports</h4>
+                          <h5><Link className="btn btn-info" >View</Link> </h5>
 
                         </div>
                       </div>
