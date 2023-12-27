@@ -19,6 +19,7 @@ import Orders from './components/Customer/Orders';
 import OrderSuccess from './components/Customer/OrderSuccess';
 import OrderFailure from './components/Customer/OrderFailure';
 import Wishlist from './components/Customer/Wishlist';
+import Profile from './components/Customer/Profile';
 // 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path='/customer/dashboard' element={<Dashboard/>}/>
         <Route path='/customer/orders' element={<Orders/>}/>
         <Route path='/customer/wishlist' element={<Wishlist/>}/>
+        <Route path='/customer/profile' element={<Profile/>}/>
         <Route path='/order/success' element={<OrderSuccess/>}/>
         <Route path='/order/fail' element={<OrderFailure/>}/>
         
