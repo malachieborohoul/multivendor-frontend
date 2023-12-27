@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 
-function Register(props) {
+function SellerRegister(props) {
     return (
    
 
             <div className="container mt-4">
-              <h3 className="mb-4">Register</h3>
+              <h3 className="mb-4">SellerRegister</h3>
               <form>
                 <div className="mb-3">
                   <label for="fistname" className="form-label">First Name</label>
@@ -34,4 +34,4 @@ function Register(props) {
     )
 }
 
-export default Register;
+export default SellerRegister;

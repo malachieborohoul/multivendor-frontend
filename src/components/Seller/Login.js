@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 
-function Login(props) {
+function SellerLogin(props) {
     return (
    
 
             <div className="container mt-4">
-              <h3 className="mb-4">Login</h3>
+              <h3 className="mb-4">SellerLogin</h3>
               <form>
 
                 <div className="mb-3">
@@ -25,4 +25,4 @@ function Login(props) {
     )
 }
 
-export default Login;
+export default SellerLogin;

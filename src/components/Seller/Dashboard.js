@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 import Sidebar from "./Sidebar";
 
-function Dashboard(props) {
+function SellerDashboard(props) {
     return (
    
 
@@ -52,4 +52,4 @@ function Dashboard(props) {
     )
 }
 
-export default Dashboard;
+export default SellerDashboard;
