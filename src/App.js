@@ -29,6 +29,7 @@ import SellerLogin from './components/Seller/SellerLogin';
 import SellerRegister from './components/Seller/SellerRegister';
 import SellerDashboard from './components/Seller/SellerDashboard';
 import SellerProducts from './components/Seller/SellerProducts';
+import AddProduct from './components/Seller/AddProduct';
 // 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
         <Route path='/seller/login' element={<SellerLogin/>}/>
         <Route path='/seller/dashboard' element={<SellerDashboard/>}/>
         <Route path='/seller/products' element={<SellerProducts/>}/>
+        <Route path='/seller/add-product' element={<AddProduct/>}/>
         
 
          

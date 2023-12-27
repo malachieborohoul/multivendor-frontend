@@ -12,7 +12,7 @@ function SellerProducts(props) {
         <div className="col-md-9 col-12 mb-2">
 
           <div className="row">
-        <h3><Link className="btn btn-primary ms-1 float-end mb-2"><i className="fa fa-plus-circle"></i> Add Product</Link></h3>
+        <h3><Link to="/seller/add-product" className="btn btn-primary ms-1 float-end mb-2"><i className="fa fa-plus-circle"></i> Add Product</Link></h3>
 
             <div className="table-responsive"></div>
             <table className="table table-bordered">
