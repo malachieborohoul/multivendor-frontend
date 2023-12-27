@@ -13,26 +13,31 @@ function AddProduct(props) {
             <h3 className="mb-4">AddProduct</h3>
             <form>
                 <div className="mb-3">
-                  <label for="fistname" className="form-label">First Name</label>
-                  <input type="text" className="form-control" id="fistname" aria-describedby="emailHelp"/>
+                  <label for="title" className="form-label">Category</label>
+                  <select className="form-control">
+                    <option>Python</option>
+                    <option>Php</option>
+                  </select>
+                </div>
+                <div className="mb-3">
+                  <label for="title" className="form-label">Title</label>
+                  <input type="text" className="form-control" id="title"/>
+
                 </div>
 
                 <div className="mb-3">
-                  <label for="lastname" className="form-label">Last Name</label>
-                  <input type="text" className="form-control" id="lastname" aria-describedby="emailHelp"/>
+                  <label for="price" className="form-label">Price</label>
+                  <input type="number" className="form-control" id="price"/>
+
                 </div>
 
                 <div className="mb-3">
-                  <label for="username" className="form-label">Username</label>
-                  <input type="text" className="form-control" id="username" aria-describedby="emailHelp"/>
+                  <label for="description" className="form-label">Description</label>
+                  <textarea type="text" className="form-control" id="description" aria-describedby="emailHelp"></textarea>
                 </div>
 
                 <div className="mb-3">
-                  <label for="email" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="email" aria-describedby="emailHelp"/>
-                </div>
-                <div className="mb-3">
-                  <label for="image" className="form-label">Photo image</label>
+                  <label for="image" className="form-label">Product image</label>
                   <input type="file" className="form-control" id="password"/>
                 </div>
                
