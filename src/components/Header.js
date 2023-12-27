@@ -31,11 +31,7 @@ function Header() {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link className="nav-link" to="/checkout">
-                  My Cart (4)
-                </Link>
-              </li>
+            
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -49,6 +45,25 @@ function Header() {
                     <li><Link class="dropdown-item" to="logout">Logout</Link></li>
                 </ul>
                 </li> 
+
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Seller Panel
+                </a>
+                <ul class="dropdown-menu">
+                    <li><Link class="dropdown-item" to="/seller/register">Register</Link></li>
+                    <li><Link class="dropdown-item" to="/seller/login">Login</Link></li>
+                    <li><hr class="dropdown-divider"/></li>
+                    <li><Link class="dropdown-item" to="/seller/dashboard">Dashboard</Link></li>
+                    <li><Link class="dropdown-item" to="/seller/logout">Logout</Link></li>
+                </ul>
+                </li>
+
+                <li className="nav-item">
+                <Link className="nav-link" to="/checkout">
+                  My Cart (4)
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
