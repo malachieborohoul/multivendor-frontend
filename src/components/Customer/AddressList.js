@@ -10,34 +10,56 @@ function AddressList(props) {
           <Sidebar />
         </div>
         <div className="col-md-9 col-12 mb-2">
-            <h3 className="mb-4">Update AddressList</h3>
-            <form>
-                <div className="mb-3">
-                  <label for="fistname" className="form-label">First Name</label>
-                  <input type="text" className="form-control" id="fistname" aria-describedby="emailHelp"/>
-                </div>
+          <div className="row">
+            <div className="col-12">
 
-                <div className="mb-3">
-                  <label for="lastname" className="form-label">Last Name</label>
-                  <input type="text" className="form-control" id="lastname" aria-describedby="emailHelp"/>
-                </div>
+            <Link className="btn btn-outline-success mb-4 float-end"><i className="fa fa-plus-circle text-success"></i> Add Address</Link>
 
-                <div className="mb-3">
-                  <label for="username" className="form-label">Username</label>
-                  <input type="text" className="form-control" id="username" aria-describedby="emailHelp"/>
-                </div>
+            </div>
+          </div>
+            <div className="row">
+              <div className="col-4 mb-2">
+                <div className="card">
+                  <div className="card-body text-muted">
+                    <h6>
+                    <i className="fa fa-check-circle text-success"></i><br/>
+                      123, NDR, Cameroon
+                      </h6>
+                  </div>
 
-                <div className="mb-3">
-                  <label for="email" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="email" aria-describedby="emailHelp"/>
                 </div>
-                <div className="mb-3">
-                  <label for="image" className="form-label">Photo image</label>
-                  <input type="file" className="form-control" id="password"/>
+              </div>
+
+              <div className="col-4 mb-2">
+                <div className="card">
+                  <div className="card-body text-muted">
+                    <span className="badge bg-secondary">Mark Default</span>
+                    <h6>123, NDR, Cameroon</h6>
+                  </div>
+
                 </div>
-               
-                <button type="submit" className="btn btn-primary">Submit</button>
-              </form>
+              </div>
+
+              <div className="col-4 mb-2">
+                <div className="card">
+                  <div className="card-body text-muted">
+                    <span className="badge bg-secondary">Mark Default</span>
+                    <h6>123, NDR, Cameroon</h6>
+                  </div>
+
+                </div>
+              </div>
+
+              <div className="col-4 mb-2">
+                <div className="card">
+                  <div className="card-body text-muted">
+                    <span className="badge bg-secondary">Mark Default</span>
+                    <h6>123, NDR, Cameroon</h6>
+                  </div>
+
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
