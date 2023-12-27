@@ -10,6 +10,8 @@ function SellerProducts(props) {
           <Sidebar />
         </div>
         <div className="col-md-9 col-12 mb-2">
+        <Link className="btn btn-primary ms-1 float-end"> Add Product</Link>
+
           <div className="row">
             <div className="table-responsive"></div>
             <table className="table table-bordered">
@@ -26,14 +28,7 @@ function SellerProducts(props) {
                 <tr>
                   <td>1</td>
                   <td>
-                    <Link>
-                      <img
-                        src={logo}
-                        className="thumbnail"
-                        width="80"
-                        alt="..."
-                      />
-                    </Link>
+                    
                     <Link>
                       <p>Django</p>
                     </Link>
@@ -42,7 +37,11 @@ function SellerProducts(props) {
                   <td><span className="text-success"><i className="fa fa-check-circle"></i> Completed</span></td>
                   {/* <td><span className="text-secondary"><i className="fa fa-spin fa-spinner"></i> Completed</span></td> */}
                   {/* <td><span className="text-danger"><i className="fa fa-times-circle"></i> Completed</span></td> */}
-                  <td><Link className="btn btn-primary">Download</Link></td>
+                  <td>
+                    <Link className="btn btn-info ms-1"> View</Link>
+                    <Link className="btn btn-primary ms-1"> Edit</Link>
+                    <Link className="btn btn-danger ms-1"> Delete</Link>
+                    </td>
                 </tr>
               </tbody>
            
