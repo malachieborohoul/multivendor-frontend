@@ -30,6 +30,8 @@ import SellerRegister from './components/Seller/SellerRegister';
 import SellerDashboard from './components/Seller/SellerDashboard';
 import SellerProducts from './components/Seller/SellerProducts';
 import AddProduct from './components/Seller/AddProduct';
+import Customers from './components/Seller/Customers';
+import VendorOrders from './components/Seller/VendorOrders';
 // 
 function App() {
   return (
@@ -60,6 +62,9 @@ function App() {
         <Route path='/seller/dashboard' element={<SellerDashboard/>}/>
         <Route path='/seller/products' element={<SellerProducts/>}/>
         <Route path='/seller/add-product' element={<AddProduct/>}/>
+        <Route path='/seller/orders' element={<VendorOrders/>}/>
+        <Route path='/seller/customers' element={<Customers/>}/>
+
         
 
          

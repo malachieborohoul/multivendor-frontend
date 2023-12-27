@@ -48,7 +48,7 @@ function Header() {
 
                 <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Seller Panel
+                    Vendors Panel
                 </a>
                 <ul class="dropdown-menu">
                     <li><Link class="dropdown-item" to="/seller/register">Register</Link></li>

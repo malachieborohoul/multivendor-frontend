@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 import Sidebar from "./SellerSidebar";
+import SellerSidebar from "./SellerSidebar";
 
-function Orders(props) {
+function Customers(props) {
   return (
     <div className="container mt-4 ">
       <div className="row">
         <div className="col-md-3 col-12 mb-2">
-          <Sidebar />
+          <SellerSidebar />
         </div>
         <div className="col-md-9 col-12 mb-2">
           <div className="row">
@@ -16,9 +17,9 @@ function Orders(props) {
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Product</th>
-                  <th>Price</th>
-                  <th>Status</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Mobile</th>
                   <th>Action</th>
                 </tr>
               </thead>
@@ -26,23 +27,17 @@ function Orders(props) {
                 <tr>
                   <td>1</td>
                   <td>
-                    <Link>
-                      <img
-                        src={logo}
-                        className="thumbnail"
-                        width="80"
-                        alt="..."
-                      />
-                    </Link>
-                    <Link>
-                      <p>Django</p>
-                    </Link>
+                  
+                      BSM
                   </td>
-                  <td>500</td>
-                  <td><span className="text-success"><i className="fa fa-check-circle"></i> Completed</span></td>
+                  <td>malachieborohoul@gmail.com</td>
+                  <td>+236697140690</td>
                   {/* <td><span className="text-secondary"><i className="fa fa-spin fa-spinner"></i> Completed</span></td> */}
                   {/* <td><span className="text-danger"><i className="fa fa-times-circle"></i> Completed</span></td> */}
-                  <td><Link className="btn btn-primary">Download</Link></td>
+                  <td>
+                  <button class="btn btn-danger " >Remove from list</button>
+
+                  </td>
                 </tr>
               </tbody>
            
@@ -54,4 +49,4 @@ function Orders(props) {
   );
 }
 
-export default Orders;
+export default Customers;

@@ -7,6 +7,7 @@ function SellerSidebar(props) {
                      
                     <Link to="/seller/dashboard" class="list-group-item list-group-item-action active">Dashboard</Link>
                     <Link to="/seller/products" class="list-group-item list-group-item-action">Products</Link>
+                    <Link to="/seller/add-product" class="list-group-item list-group-item-action">Add Product</Link>
                     <Link to="/seller/orders" class="list-group-item list-group-item-action">Orders</Link>
                     <Link to="/seller/customers" class="list-group-item list-group-item-action">Customers</Link>
                     <Link to="/seller/change-password" class="list-group-item list-group-item-action">Reports</Link>
