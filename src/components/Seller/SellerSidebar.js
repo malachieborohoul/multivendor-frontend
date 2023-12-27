@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 
-function Sidebar(props) {
+function SellerSidebar(props) {
     return (  
       <div class="list-group">
                      
-                    <Link to="/customer/dashboard" class="list-group-item list-group-item-action active">Sidebar</Link>
+                    <Link to="/customer/dashboard" class="list-group-item list-group-item-action active">SellerSidebar</Link>
                     <Link to="/customer/orders" class="list-group-item list-group-item-action">Orders</Link>
                     <Link to="/customer/wishlist" class="list-group-item list-group-item-action">Wishlist</Link>
                     <Link to="/customer/profile" class="list-group-item list-group-item-action">Profile</Link>
@@ -18,4 +18,4 @@ function Sidebar(props) {
     )
 }
 
-export default Sidebar;
+export default SellerSidebar;

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
-import Sidebar from "./Sidebar";
+import Sidebar from "./SellerSidebar";
 
 function AddressList(props) {
     return (
