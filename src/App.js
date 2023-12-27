@@ -18,6 +18,7 @@ import Dashboard from './components/Customer/Dashboard';
 import Orders from './components/Customer/Orders';
 import OrderSuccess from './components/Customer/OrderSuccess';
 import OrderFailure from './components/Customer/OrderFailure';
+import Wishlist from './components/Customer/Wishlist';
 // 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path='/customer/login' element={<Login/>}/>
         <Route path='/customer/dashboard' element={<Dashboard/>}/>
         <Route path='/customer/orders' element={<Orders/>}/>
+        <Route path='/customer/wishlist' element={<Wishlist/>}/>
         <Route path='/order/success' element={<OrderSuccess/>}/>
         <Route path='/order/fail' element={<OrderFailure/>}/>
         
