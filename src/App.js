@@ -25,9 +25,9 @@ import AddressList from './components/Customer/AddressList';
 import AddAddress from './components/Customer/AddAddress';
 
 
-import SellerLogin from './components/Seller/Login';
-import SellerRegister from './components/Seller/Register';
-import SellerDashboard from './components/Seller/Dashboard';
+import SellerLogin from './components/Seller/SellerLogin';
+import SellerRegister from './components/Seller/SellerRegister';
+import SellerDashboard from './components/Seller/SellerDashboard';
 // 
 function App() {
   return (
