@@ -13,7 +13,7 @@ function AddressList(props) {
           <div className="row">
             <div className="col-12">
 
-            <Link className="btn btn-outline-success mb-4 float-end"><i className="fa fa-plus-circle text-success"></i> Add Address</Link>
+            <Link to="/customer/add-address" className="btn btn-outline-success mb-4 float-end"><i className="fa fa-plus-circle text-success"></i> Add Address</Link>
 
             </div>
           </div>

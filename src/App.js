@@ -22,6 +22,7 @@ import Wishlist from './components/Customer/Wishlist';
 import Profile from './components/Customer/Profile';
 import ChangePassword from './components/Customer/ChangePassword';
 import AddressList from './components/Customer/AddressList';
+import AddAddress from './components/Customer/AddAddress';
 // 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
         <Route path='/customer/profile' element={<Profile/>}/>
         <Route path='/customer/change-password' element={<ChangePassword/>}/>
         <Route path='/customer/addresses' element={<AddressList/>}/>
+        <Route path='/customer/add-address' element={<AddAddress/>}/>
         <Route path='/order/success' element={<OrderSuccess/>}/>
         <Route path='/order/fail' element={<OrderFailure/>}/>
         
