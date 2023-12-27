@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
-import Sidebar from "./Sidebar";
+import SellerSidebar from "./SellerSidebar";
 
 function VendorProfile(props) {
     return (
       <div className="container mt-4 ">
       <div className="row">
         <div className="col-md-3 col-12 mb-2">
-          <Sidebar />
+          <SellerSidebar />
         </div>
         <div className="col-md-9 col-12 mb-2">
             <h3 className="mb-4">Update Profile</h3>

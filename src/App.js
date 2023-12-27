@@ -33,6 +33,8 @@ import AddProduct from './components/Seller/AddProduct';
 import Customers from './components/Seller/Customers';
 import VendorOrders from './components/Seller/VendorOrders';
 import Reports from './components/Seller/Reports';
+import VendorChangePassword from './components/Seller/VendorChangePassword';
+import VendorProfile from './components/Seller/VendorProfile';
 // 
 function App() {
   return (
@@ -66,8 +68,8 @@ function App() {
         <Route path='/seller/orders' element={<VendorOrders/>}/>
         <Route path='/seller/customers' element={<Customers/>}/>
         <Route path='/seller/reports' element={<Reports/>}/>
-        <Route path='/seller/change-password' element={<Ven/>}/>
-        <Route path='/seller/profile' element={<Profile/>}/>
+        <Route path='/seller/change-password' element={<VendorChangePassword/>}/>
+        <Route path='/seller/profile' element={<VendorProfile/>}/>
 
 
 
