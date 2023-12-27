@@ -35,7 +35,8 @@ function Customers(props) {
                   {/* <td><span className="text-secondary"><i className="fa fa-spin fa-spinner"></i> Completed</span></td> */}
                   {/* <td><span className="text-danger"><i className="fa fa-times-circle"></i> Completed</span></td> */}
                   <td>
-                  <button class="btn btn-danger " >Remove from list</button>
+                  <button class="btn btn-primary ms-1 " >Order</button>
+                  <button class="btn btn-danger ms-1 " >Remove from list</button>
 
                   </td>
                 </tr>
