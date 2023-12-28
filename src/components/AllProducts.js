@@ -31,6 +31,11 @@ function fetchData(baseUrl){
   })
 }
 
+const links= [];
+for (let i =0 ;i<totalResults; i++){
+  links.push( <li class="page-item"><Link class="page-link" href="#">{i+1}</Link></li>)
+}
+
 
     return (
     <section className="container mt-4">
@@ -52,9 +57,8 @@ function fetchData(baseUrl){
               <span aria-hidden="true">&laquo;</span>
             </a>
           </li>
-          <li class="page-item"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          {links}
+
           <li class="page-item">
             <a class="page-link" href="#" aria-label="Next">
               <span aria-hidden="true">&raquo;</span>
