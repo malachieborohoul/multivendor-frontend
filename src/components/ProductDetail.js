@@ -1,8 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import logo from "../logo.svg";
 import SingleProduct from "./SingleProduct";
+import { useEffect, useState } from "react";
 
-function ProductDetail(props) {
+ 
+function ProductDetail() {
+  const baseUrl = 'http://localhost:8000/api';
+
+const [products, setProducts]=useState([])
+let {slug,id}= useParams() 
+
+function fetchData(baseurl){
+  fetch(baseurl)
+  .then((response)=>response.json())
+  .then((data)=>{
+    setProducts(data.results)
+  })
+}
+useEffect(()=>{
+  fetchData(baseUrl+'/products/'+id);
+},[])
+
+
+
   return (
     <section className="container mt-4">
       <div className="row">
@@ -84,7 +104,7 @@ function ProductDetail(props) {
         <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="row">
-                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/> 
                 <SingleProduct title="Django"/>
                 <SingleProduct title="Django"/>
                 <SingleProduct title="Django"/>

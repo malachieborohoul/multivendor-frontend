@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 
 function SingleProduct(props) {
+
     return (
    
 
             <div className="col-12 col-md-3 mb-3">
               <div className="card shadow">
-                <Link to={`/products/${props.product.title}/${props.product.id}`}>
+                <Link to={`/products/Python/1`}>
                   <img src={logo} className="card-img-top" alt="..." />
                 </Link>
                 
