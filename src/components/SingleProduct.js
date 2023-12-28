@@ -13,7 +13,7 @@ function SingleProduct(props) {
                 
                 <hr/>
                 <div className="card-body">
-                  <h5 className="card-title">{props.product.title}</h5>
+                  <h5 className="card-title"><Link to={`/products/${props.product.title}`} >{props.product.title}</Link></h5>
                   <h5 className="card-title text-muted">Price Rs. {props.product.price}</h5>
                   <div className="card-footer">
                     
