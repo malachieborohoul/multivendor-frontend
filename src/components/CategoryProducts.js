@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import logo from "../logo.svg";
 import SingleProduct from "./SingleProduct";
 import { useEffect, useState } from "react";
-
 function CategoryProducts(params) {
 //   let products=[
 //     {
@@ -12,15 +11,16 @@ function CategoryProducts(params) {
 //     {
 //       "title":"Django",
 //       "price":120
-//     }
+//     } 
 // ]
 const baseUrl = 'http://localhost:8000/api';
 
 const [products, setProducts]=useState([])
 const [totalResults, setTotalResults]=useState(0)
-
+let {slug,id}= useParams() 
+console.log(id)
 useEffect(()=>{
-  fetchData(baseUrl+'/products/');
+  fetchData(baseUrl+'/products/?category='+id);
 },[])
 
 function fetchData(baseurl){
@@ -37,9 +37,9 @@ function changeUrl (baseurl) {
  }
 const links= [];
 for (let i =0 ;i<totalResults; i++){
-  links.push( <li class="page-item"><Link onClick={()=>{changeUrl(baseUrl+`/products/?page=${i+1}`)}} to={`/products/?page=${i+1}`} class="page-link" href="#">{i+1}</Link></li>)
+  links.push( <li class="page-item"><Link onClick={()=>{changeUrl(baseUrl+`/products/?category=${id}&page=${i+1}`)}} to={`/categories/${slug}/${id}`} class="page-link" href="#">{i+1}</Link></li>)
 }
-
+ 
 
     return (
     <section className="container mt-4">

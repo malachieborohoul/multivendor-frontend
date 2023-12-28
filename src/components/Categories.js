@@ -41,7 +41,7 @@ function Categories() {
             <img src={logo} className="card-img-top" alt="..." />
             <hr/>
             <div className="card-body">
-              <h4 className="card-title"><Link  to="/categories/python/1">{category.title}</Link></h4>
+              <h4 className="card-title"><Link  to={`/categories/${category.title}/${category.id}`}>{category.title}</Link></h4>
               <h5 className="card-title text-muted">Price Rs. 500</h5>
               <div className="card-footer">
                 
