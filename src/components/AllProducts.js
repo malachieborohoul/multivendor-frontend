@@ -14,17 +14,17 @@ function AllProducts(params) {
 //       "price":120
 //     }
 // ]
+const baseUrl = 'http://localhost:8000/api';
 
 const [products, setProducts]=useState([])
 const [totalResults, setTotalResults]=useState(0)
-const [baseurl, setbaseurl]=useState('http://localhost:8000/api/products/')
 
 useEffect(()=>{
-  fetchData( baseurl);
-})
+  fetchData(baseUrl+'/products/');
+},[])
 
-function fetchData(){
-  fetch(baseUrl)
+function fetchData(baseurl){
+  fetch(baseurl)
   .then((response)=>response.json())
   .then((data)=>{
     setProducts(data.results)
@@ -32,10 +32,12 @@ function fetchData(){
   })
 }
 
-function changeUrl (param) {  }
+function changeUrl (baseurl) { 
+  fetchData(baseurl)
+ }
 const links= [];
 for (let i =0 ;i<totalResults; i++){
-  links.push( <li class="page-item"><Link onClick={()=>{fetchData(`http://localhost:8000/api/products/?page=${i+1}`)}} to={`/products/?page=${i+1}`} class="page-link" href="#">{i+1}</Link></li>)
+  links.push( <li class="page-item"><Link onClick={()=>{changeUrl(baseUrl+`/products/?page=${i+1}`)}} to={`/products/?page=${i+1}`} class="page-link" href="#">{i+1}</Link></li>)
 }
 
 
