@@ -1,31 +1,31 @@
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import Categories from "./Categories";
+import SingleProduct from "./SingleProduct";
 
 function Home(){
+
+  const products =[
+    {
+      'title':'Product1',
+      'price':100
+    },
+    {
+      'title':'Product2',
+      'price':100
+    }
+  ]
     return(
-        <main className="mt-4">
+        <main className="mt-4"> 
         <div className="container">
 
           <h3 className="mb-4">Latest Products <Link  className="float-end btn btn-sm btn-dark mt-0 " to="/products">View all products <i className="fa fa-arrow-right-long mt-2" aria-hidden="true"></i></Link></h3>
           <div className="row">
           {/* Product Box */}
-
-            <div className="col-12 col-md-3 mb-3">
-              <div className="card shadow">
-                <img src={logo} className="card-img-top" alt="..." />
-                <hr/>
-                <div className="card-body">
-                  <h4 className="card-title">Product title</h4>
-                  <h5 className="card-title text-muted">Price Rs. 500</h5>
-                  <div className="card-footer">
-                    
-                    <button title="Add to cart" className="btn btn-success btn-sm"><i className="fa fa-cart-plus" aria-hidden="true"></i></button>
-                    <button title="Add to Wishlist" className="btn btn-danger btn-sm ms-2"><i className="fa fa-heart" aria-hidden="true"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            {products.map((product)=>{
+             return  <SingleProduct product={product}  />
+            })}
+            
           {/* Product Box End*/}
 
 
