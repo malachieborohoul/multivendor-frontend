@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import SingleProduct from "./SingleProduct";
+import { useEffect, useState } from "react";
 
 function AllProducts(params) {
   let products=[
@@ -13,12 +14,24 @@ function AllProducts(params) {
       "price":120
     }
 ]
+
+const [Products, setProducts]=useState([])
+
+useEffect(()=>{
+  fetchData('http://localhost:8000/api/products/');
+})
+
+function fetchData(baseUrl){
+  fetch(baseUrl)
+  .then((response)=>response.json())
+  .then((data)=>setProducts(data.results))
+}
     return (
     <section className="container mt-4">
         <h3 className="mb-4"><span className="text-success">Python</span> Products</h3>
       <div className="row">
             {/* Product Box */}
-          {products.map((product)=>{
+          {Products.map((product)=>{
             return <SingleProduct product={product}/>
           })}
            
