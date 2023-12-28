@@ -4,18 +4,19 @@ import SingleProduct from "./SingleProduct";
 import { useEffect, useState } from "react";
 
 function AllProducts(params) {
-  let products=[
-    {
-      "title":"Python",
-      "price":100
-    },
-    {
-      "title":"Django",
-      "price":120
-    }
-]
+//   let products=[
+//     {
+//       "title":"Python",
+//       "price":100
+//     },
+//     {
+//       "title":"Django",
+//       "price":120
+//     }
+// ]
 
-const [Products, setProducts]=useState([])
+const [products, setProducts]=useState([])
+const [totalResults, setTotalResults]=useState(0)
 
 useEffect(()=>{
   fetchData('http://localhost:8000/api/products/');
@@ -24,14 +25,19 @@ useEffect(()=>{
 function fetchData(baseUrl){
   fetch(baseUrl)
   .then((response)=>response.json())
-  .then((data)=>setProducts(data.results))
+  .then((data)=>{
+    setProducts(data.results)
+    setTotalResults(data.count)
+  })
 }
+
+
     return (
     <section className="container mt-4">
         <h3 className="mb-4"><span className="text-success">Python</span> Products</h3>
       <div className="row">
             {/* Product Box */}
-          {Products.map((product)=>{
+          {products.map((product)=>{
             return <SingleProduct product={product}/>
           })}
            
