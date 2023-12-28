@@ -7,19 +7,22 @@ import { useEffect, useState } from "react";
 function ProductDetail() {
   const baseUrl = 'http://localhost:8000/api';
 
-const [products, setProducts]=useState([])
+const [productData, setProductData]=useState([])
 let {slug,id}= useParams() 
 
+useEffect(()=>{
+  fetchData(baseUrl+'/products/'+id);
+},[])
 function fetchData(baseurl){
   fetch(baseurl)
   .then((response)=>response.json())
   .then((data)=>{
-    setProducts(data.results)
+
+    setProductData(data.results)
+
   })
 }
-useEffect(()=>{
-  fetchData(baseUrl+'/products/'+id);
-},[])
+
 
 
 
@@ -60,18 +63,9 @@ useEffect(()=>{
         </div>
         </div>
         <div className="col-8">
-          <h3>Product Title</h3>
+          <h3>{productData.title}</h3>
           <p>
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using Lorem Ipsum is that it has a more-or-less normal
-            distribution of letters, as opposed to using 'Content here, content
-            here', making it look like readable English. Many desktop publishing
-            packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web
-            sites still in their infancy. Various versions have evolved over the
-            years, sometimes by accident, sometimes on purpose (injected humour
-            and the like).
+           {productData.detail}
           </p>
           <h5 className="card-title">Price Rs 500</h5>
           <p className="mt-3">
@@ -104,28 +98,28 @@ useEffect(()=>{
         <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="row">
-                <SingleProduct title="Django"/> 
+                {/* <SingleProduct title="Django"/> 
                 <SingleProduct title="Django"/>
                 <SingleProduct title="Django"/>
-                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/> */}
 
               </div>
             </div>
             <div className="carousel-item">
             <div className="row">
+                {/* <SingleProduct title="Django"/>
                 <SingleProduct title="Django"/>
                 <SingleProduct title="Django"/>
-                <SingleProduct title="Django"/>
-                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/> */}
 
               </div>
             </div>
             <div className="carousel-item">
             <div className="row">
+                {/* <SingleProduct title="Django"/>
                 <SingleProduct title="Django"/>
                 <SingleProduct title="Django"/>
-                <SingleProduct title="Django"/>
-                <SingleProduct title="Django"/>
+                <SingleProduct title="Django"/> */}
 
               </div>
             </div>

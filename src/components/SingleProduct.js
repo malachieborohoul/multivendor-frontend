@@ -8,13 +8,13 @@ function SingleProduct(props) {
 
             <div className="col-12 col-md-3 mb-3">
               <div className="card shadow">
-                <Link to={`/products/Python/1`}>
+                <Link to={`/products/${props.product.title}/${props.product.id}`}>
                   <img src={logo} className="card-img-top" alt="..." />
                 </Link>
                 
                 <hr/>
                 <div className="card-body">
-                  <h5 className="card-title"><Link to={`/products/${props.product.title}`} >{props.product.title}</Link></h5>
+                  <h5 className="card-title"><Link to={`/products/${props.product.title}/${props.product.id}`} >{props.product.title}</Link></h5>
                   <h5 className="card-title text-muted">Price Rs. {props.product.price}</h5>
                   <div className="card-footer">
                     
