@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import Categories from "./Categories";
 import SingleProduct from "./SingleProduct";
+import { useEffect, useState } from "react";
 
 function Home(){
 
@@ -15,6 +16,8 @@ function Home(){
       'price':100
     }
   ]
+
+
     return(
         <main className="mt-4"> 
         <div className="container">
@@ -35,7 +38,7 @@ function Home(){
 
 
 
-        <Categories/>
+        <Categories />
 
           <h3 className="mb-4">Popular Sellers <a  className="float-end btn btn-sm btn-dark mt-0 " href="#">View all Sellers <i className="fa fa-arrow-right-long mt-2" aria-hidden="true"></i></a></h3>
           <div className="row">

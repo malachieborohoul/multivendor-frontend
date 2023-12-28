@@ -1,14 +1,34 @@
 import { Link } from "react-router-dom";
 import logo from "../logo.svg";
+import { useEffect, useState } from "react";
 
-function Categories(params) {
+function Categories() {
+  const baseUrl = 'http://localhost:8000/api';
+
+  const [categories, setCategories]=useState([])
+  const [totalResults, setTotalResults]=useState(0)
+
+  useEffect(()=>{
+    fetchData(baseUrl+'/categories/');
+  },[])
+
+  function fetchData(baseurl){
+    fetch(baseurl)
+    .then((response)=>response.json())
+    .then((data)=>{
+      setCategories(data.results)
+      setTotalResults(data.count)
+    })
+  }
     return (
     <section className="container mt-4">
         <h3 className="mb-4">Popular Categories </h3>
       <div className="row">
       {/* Category Box */}
 
-        <div className="col-12 col-md-3 mb-3">
+      {categories.map((category)=>{
+        return (
+          <div className="col-12 col-md-3 mb-3">
           <div className="card shadow">
             <img src={logo} className="card-img-top" alt="..." />
             <hr/>
@@ -22,6 +42,10 @@ function Categories(params) {
             </div>
           </div>
         </div>
+        )
+      })}
+
+        
       {/* Category Box End*/}
       </div>
 
