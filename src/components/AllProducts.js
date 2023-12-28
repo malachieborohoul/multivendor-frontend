@@ -47,7 +47,7 @@ for (let i =0 ;i<totalResults; i++){
       <div className="row">
             {/* Product Box */}
           {products.map((product)=>{
-            return <SingleProduct product={product}/>
+            return <SingleProduct  product={product}/>
           })}
            
           

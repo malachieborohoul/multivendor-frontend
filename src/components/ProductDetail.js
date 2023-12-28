@@ -5,25 +5,25 @@ import { useEffect, useState } from "react";
 
  
 function ProductDetail() {
-  const baseUrl = 'http://localhost:8000/api';
+  const baseUrl = 'http://127.0.0.1:8000/api';
 
 const [productData, setProductData]=useState([])
-let {slug,id}= useParams() 
-
+let {slug,productId}= useParams() 
+console.log(productId)
 useEffect(()=>{
-  fetchData(baseUrl+'/products/'+id);
+  fetchData(baseUrl+`/products/${1}`);
 },[])
 function fetchData(baseurl){
   fetch(baseurl)
   .then((response)=>response.json())
   .then((data)=>{
 
-    setProductData(data.results)
+    setProductData(data)
 
   })
 }
 
-
+console.log(productData)
 
 
   return (
@@ -63,9 +63,9 @@ function fetchData(baseurl){
         </div>
         </div>
         <div className="col-8">
-          <h3>{productData.title}</h3>
+          <h3>Pro</h3>
           <p>
-           {productData.detail}
+           Detail
           </p>
           <h5 className="card-title">Price Rs 500</h5>
           <p className="mt-3">
