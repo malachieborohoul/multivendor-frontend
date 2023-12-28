@@ -17,12 +17,13 @@ function AllProducts(params) {
 
 const [products, setProducts]=useState([])
 const [totalResults, setTotalResults]=useState(0)
+const [baseurl, setbaseurl]=useState('http://localhost:8000/api/products/')
 
 useEffect(()=>{
-  fetchData('http://localhost:8000/api/products/');
+  fetchData( baseurl);
 })
 
-function fetchData(baseUrl){
+function fetchData(){
   fetch(baseUrl)
   .then((response)=>response.json())
   .then((data)=>{
@@ -31,6 +32,7 @@ function fetchData(baseUrl){
   })
 }
 
+function changeUrl (param) {  }
 const links= [];
 for (let i =0 ;i<totalResults; i++){
   links.push( <li class="page-item"><Link onClick={()=>{fetchData(`http://localhost:8000/api/products/?page=${i+1}`)}} to={`/products/?page=${i+1}`} class="page-link" href="#">{i+1}</Link></li>)
