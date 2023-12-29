@@ -9,6 +9,7 @@ function ProductDetail() {
 
 const [productData, setProductData]=useState([])
 const [productImgs, setProductImgs]=useState([])
+const [productTags, setProductTags]=useState([])
 let {slug,id}= useParams() 
 useEffect(()=>{
   fetchData(baseUrl+`/products/${id}/`);
@@ -20,6 +21,7 @@ function fetchData(baseurl){
     console.log( response.data)
     setProductData(response.data)
     setProductImgs(response.data.product_imgs)
+    setProductTags(response.data.tag_list)
     console.log(productImgs)
   }
   )
