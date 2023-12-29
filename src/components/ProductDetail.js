@@ -35,7 +35,7 @@ function fetchRelatedData(baseurl){
   .then((response)=>{
    
     console.log( response.data)
-    setRelatedProducts(response.data)
+    setRelatedProducts(response.data.results)
    
     console.log(productImgs)
   }
@@ -136,12 +136,12 @@ function fetchRelatedData(baseurl){
             <div className="carousel-item active">
               <div className="row">
               {
-            relatedProducts.map((img, index)=>{
+            relatedProducts.map((related, index)=>{
              if (index===0){
               return (
                 <div className="carousel-item active">
                   <div className="row">
-                    <img src={img.image} className="img-thumbnail mb-5"  alt={index} />
+                  <SingleProduct product={related}/>
                   </div>
               </div>
               )
@@ -149,7 +149,8 @@ function fetchRelatedData(baseurl){
               return (
                 <div className="carousel-item">
                   <div className="row">
-                    <img src={img.image} className="img-thumbnail mb-5" alt={index } />
+                  <SingleProduct product={related}/>
+
                   </div>
               </div>
               )
