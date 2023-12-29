@@ -10,9 +10,11 @@ function ProductDetail() {
 const [productData, setProductData]=useState([])
 const [productImgs, setProductImgs]=useState([])
 const [productTags, setProductTags]=useState([])
+const [relatedProducts, setRelatedProducts]=useState([])
 let {slug,id}= useParams() 
 useEffect(()=>{
   fetchData(baseUrl+`/products/${id}/`);
+  fetchRelatedData(baseUrl+`/related-products/${id}/`);
 },[])
 function fetchData(baseurl){
   axios.get(baseurl)
@@ -28,7 +30,18 @@ function fetchData(baseurl){
  
 }
 console.log(productData)
-
+function fetchRelatedData(baseurl){
+  axios.get(baseurl)
+  .then((response)=>{
+   
+    console.log( response.data)
+    setRelatedProducts(response.data)
+   
+    console.log(productImgs)
+  }
+  )
+ 
+}
 
   return (
     <section className="container mt-4">
@@ -105,20 +118,44 @@ console.log(productData)
         </div>
       </div>
       {/* Related Products */}
-      <h3 className="mt-4 mb-2" >Related Products</h3>
+      <h3 className="mt-4 mb-2 text-center" >Related Products</h3>
       <div id="productThumbnailsSlider" className="carousel carousel-dark slide  border" data-bs-ride="true ">
         <div className="carousel-indicators">
-          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          {
+             relatedProducts.map((image, index)=>{
+              if(index===0){
+                return <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to={index} className="active" aria-current="true" aria-label="Slide 1"></button>
+              }else{
+                return <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to={index} className="active" aria-current="true" aria-label="Slide 1"></button>
+                
+              }
+            })
+          }
         </div>
         <div className="carousel-inner">
             <div className="carousel-item active">
               <div className="row">
-                {/* <SingleProduct title="Django"/> 
-                <SingleProduct title="Django"/>
-                <SingleProduct title="Django"/>
-                <SingleProduct title="Django"/> */}
+              {
+            relatedProducts.map((img, index)=>{
+             if (index===0){
+              return (
+                <div className="carousel-item active">
+                  <div className="row">
+                    <img src={img.image} className="img-thumbnail mb-5"  alt={index} />
+                  </div>
+              </div>
+              )
+             }else{
+              return (
+                <div className="carousel-item">
+                  <div className="row">
+                    <img src={img.image} className="img-thumbnail mb-5" alt={index } />
+                  </div>
+              </div>
+              )
+             }
+            })
+          }
 
               </div>
             </div>
