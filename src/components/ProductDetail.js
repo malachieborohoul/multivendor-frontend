@@ -2,27 +2,32 @@ import { Link, useParams } from "react-router-dom";
 import logo from "../logo.svg";
 import SingleProduct from "./SingleProduct";
 import { useEffect, useState } from "react";
-
+import axios from 'axios'
  
 function ProductDetail() {
   const baseUrl = 'http://127.0.0.1:8000/api';
 
 const [productData, setProductData]=useState([])
-let {slug,productId}= useParams() 
-console.log(productId)
+let {slug,id}= useParams() 
+console.log(id)
 useEffect(()=>{
-  fetchData(baseUrl+`/products/${1}`);
+  fetchData(baseUrl+`/products/`);
 },[])
 function fetchData(baseurl){
-  fetch(baseurl)
-  .then((response)=>response.json())
-  .then((data)=>{
-
-    setProductData(data)
-
+  axios.get(baseurl,{
+    params:{
+      id:id
+    }
   })
+  // fetch(baseurl)
+  .then((response)=>{
+   
+    console.log( response.data)
+    setProductData(response.data.results)
+  }
+  )
+ 
 }
-
 console.log(productData)
 
 
