@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import logo from "../logo.svg";
 import SingleProduct from "./SingleProduct";
 import { useEffect, useState } from "react";
 import axios from 'axios'
+
 function TagProducts(params) {
 //   let products=[
 //     {
@@ -19,8 +20,9 @@ const baseUrl = 'http://localhost:8000/api';
 const [products, setProducts]=useState([])
 const [totalResults, setTotalResults]=useState(0)
 
+let tag = useParams()
 useEffect(()=>{
-  fetchData(baseUrl+'/products/');
+  fetchData(baseUrl+`/products/${tag}`);
 },[])
 
 function fetchData(baseurl){
