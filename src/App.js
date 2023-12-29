@@ -35,6 +35,7 @@ import VendorOrders from './components/Seller/VendorOrders';
 import Reports from './components/Seller/Reports';
 import VendorChangePassword from './components/Seller/VendorChangePassword';
 import VendorProfile from './components/Seller/VendorProfile';
+import TagProducts from './components/TagProducts';
 // 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/categories' element={<Categories/>}/>
         <Route path='/categories/:slug/:id' element={<CategoryProducts/>}/>
+        <Route path='/products/:tag' element={<TagProducts/>}/>
         <Route path='/products' element={<AllProducts/>}/>
         <Route path='/products/:slug/:id' element={<ProductDetail/>}/>
         <Route path='/checkout' element={<Checkout/>}/>
