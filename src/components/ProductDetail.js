@@ -94,9 +94,10 @@ console.log(productData)
           <div className="producttags">
             <h5 className="mt-3">Tags</h5>
             <p className="mt-3">
-                <Link className="badge bg-secondary text-white me-1" to="">python</Link>
-                <Link className="badge bg-secondary text-white me-1" to="">php</Link>
-                <Link className="badge bg-secondary text-white me" to="">java</Link>
+              {productTags.map((tag)=>{
+                return <Link className="badge bg-secondary text-white me-1" to="">{tag}</Link>
+              })}
+                
               
             </p>
           </div>
