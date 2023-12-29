@@ -10,8 +10,8 @@ function Login(props) {
               <form>
 
                 <div className="mb-3">
-                  <label for="email" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="email" aria-describedby="emailHelp"/>
+                  <label for="username" name="username"  className="form-label">Username</label>
+                  <input type="email" className="form-control" id="username" aria-describedby="emailHelp"/>
                 </div>
                 <div className="mb-3">
                   <label for="password" className="form-label">Password</label>
