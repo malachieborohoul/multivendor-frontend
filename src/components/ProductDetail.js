@@ -10,7 +10,6 @@ function ProductDetail() {
 const [productData, setProductData]=useState([])
 const [productImgs, setProductImgs]=useState([])
 let {slug,id}= useParams() 
-console.log(id)
 useEffect(()=>{
   fetchData(baseUrl+`/products/${id}/`);
 },[])
@@ -21,6 +20,7 @@ function fetchData(baseurl){
     console.log( response.data)
     setProductData(response.data)
     setProductImgs(response.data.product_imgs)
+    console.log(productImgs)
   }
   )
  
@@ -35,11 +35,11 @@ console.log(productData)
         <div id="productThumbnailsSlider" className="carousel carousel-dark slide  border" data-bs-ride="true ">
         <div className="carousel-indicators">
         {
-            productImgs .map((image, index)=>{
+            productImgs.map((image, index)=>{
               if(index===0){
-                return <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                return <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to={index} className="active" aria-current="true" aria-label="Slide 1"></button>
               }else{
-                return <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                return <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to={index} className="active" aria-current="true" aria-label="Slide 1"></button>
                 
               }
             })
@@ -48,12 +48,12 @@ console.log(productData)
         </div>
         <div className="carousel-inner">
         {
-            productImgs .map((img, index)=>{
+            productImgs.map((img, index)=>{
              if (index===0){
               return (
                 <div className="carousel-item">
                   <div className="row">
-                    <img src={img.image} className="img-thumbnail mb-5" alt="..." />
+                    <img src={img.image} className="img-thumbnail mb-5"  alt={index} />
                   </div>
               </div>
               )
@@ -61,7 +61,7 @@ console.log(productData)
               return (
                 <div className="carousel-item">
                   <div className="row">
-                    <img src={img.image} className="img-thumbnail mb-5" alt="..." />
+                    <img src={img.image} className="img-thumbnail mb-5" alt={index } />
                   </div>
               </div>
               )
