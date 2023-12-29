@@ -8,6 +8,7 @@ function ProductDetail() {
   const baseUrl = 'http://127.0.0.1:8000/api';
 
 const [productData, setProductData]=useState([])
+const [productImgs, setProductImgs]=useState([])
 let {slug,id}= useParams() 
 console.log(id)
 useEffect(()=>{
@@ -19,6 +20,7 @@ function fetchData(baseurl){
    
     console.log( response.data)
     setProductData(response.data)
+    setProductImgs(response.data.product_imgs)
   }
   )
  
@@ -32,32 +34,44 @@ console.log(productData)
         <div className="col-4">
         <div id="productThumbnailsSlider" className="carousel carousel-dark slide  border" data-bs-ride="true ">
         <div className="carousel-indicators">
-          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        {
+            productImgs .map((image, index)=>{
+              if(index===0){
+                return <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+              }else{
+                return <button type="button" data-bs-target="#productThumbnailsSlider" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                
+              }
+            })
+          }
+
         </div>
         <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="row">
-              <img src={logo} className="img-thumbnail mb-5" alt="..." />
-               
-
+        {
+            productImgs .map((img, index)=>{
+             if (index===0){
+              return (
+                <div className="carousel-item">
+                  <div className="row">
+                    <img src={img.image} className="img-thumbnail mb-5" alt="..." />
+                  </div>
               </div>
-            </div>
-            <div className="carousel-item">
-            <div className="row">
-            <img src={logo} className="img-thumbnail mb-5" alt="..." />
-              
-
+              )
+             }else{
+              return (
+                <div className="carousel-item">
+                  <div className="row">
+                    <img src={img.image} className="img-thumbnail mb-5" alt="..." />
+                  </div>
               </div>
-            </div>
-            <div className="carousel-item">
-            <div className="row">
-            <img src={logo} className="img-thumbnail mb-5" alt="..." />
-                
-
-              </div>
-            </div>
+              )
+             }
+            })
+          }
+        
+           
+           
+            
           </div>
         
         </div>
