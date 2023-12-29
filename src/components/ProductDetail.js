@@ -51,7 +51,7 @@ console.log(productData)
             productImgs.map((img, index)=>{
              if (index===0){
               return (
-                <div className="carousel-item">
+                <div className="carousel-item active">
                   <div className="row">
                     <img src={img.image} className="img-thumbnail mb-5"  alt={index} />
                   </div>
