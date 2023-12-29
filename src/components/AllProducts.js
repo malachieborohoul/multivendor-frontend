@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../logo.svg";
 import SingleProduct from "./SingleProduct";
 import { useEffect, useState } from "react";
-
+import axios from 'axios'
 function AllProducts(params) {
 //   let products=[
 //     {
@@ -24,12 +24,16 @@ useEffect(()=>{
 },[])
 
 function fetchData(baseurl){
-  fetch(baseurl)
-  .then((response)=>response.json())
-  .then((data)=>{
-    setProducts(data.results)
-    setTotalResults(data.count)
-  })
+  axios.get(baseurl)
+  // fetch(baseurl)
+  .then((response)=>{
+   
+    console.log( response.data)
+    setProducts(response.data.results)
+    setTotalResults(response.data.count)
+  }
+  )
+ 
 }
 
 function changeUrl (baseurl) { 
