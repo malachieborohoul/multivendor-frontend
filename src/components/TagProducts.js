@@ -43,7 +43,7 @@ function changeUrl (baseurl) {
  }
 const links= [];
 for (let i =0 ;i<totalResults; i++){
-  links.push( <li class="page-item"><Link onClick={()=>{changeUrl(baseUrl+`/products/?page=${i+1}`)}} to={`/products/?page=${i+1}`} class="page-link" href="#">{i+1}</Link></li>)
+  links.push( <li class="page-item"><Link onClick={()=>{changeUrl(baseUrl+`/products/${tag}?page=${i+1}`)}} to={`/products/${tag}?page=${i+1}`} class="page-link" href="#">{i+1}</Link></li>)
 }
 
 
