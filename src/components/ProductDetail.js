@@ -11,19 +11,14 @@ const [productData, setProductData]=useState([])
 let {slug,id}= useParams() 
 console.log(id)
 useEffect(()=>{
-  fetchData(baseUrl+`/products/`);
+  fetchData(baseUrl+`/products/${id}/`);
 },[])
 function fetchData(baseurl){
-  axios.get(baseurl,{
-    params:{
-      id:id
-    }
-  })
-  // fetch(baseurl)
+  axios.get(baseurl)
   .then((response)=>{
    
     console.log( response.data)
-    setProductData(response.data.results)
+    setProductData(response.data)
   }
   )
  
@@ -68,9 +63,9 @@ console.log(productData)
         </div>
         </div>
         <div className="col-8">
-          <h3>Pro</h3>
+          <h3>{productData.title} </h3>
           <p>
-           Detail
+          {productData.detail}
           </p>
           <h5 className="card-title">Price Rs 500</h5>
           <p className="mt-3">
