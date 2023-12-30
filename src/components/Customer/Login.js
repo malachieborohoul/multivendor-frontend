@@ -13,6 +13,8 @@ function Login(props) {
     'username':'',
     'password':''
   }) 
+  const[formError, setFormError]=useState(false)
+  const[errorMsg, setErrorMsg]=useState('')
 
  const inputHandler=(event)=>{
     setLoginFormData({
@@ -28,7 +30,16 @@ function Login(props) {
 
     axios.post(baseUrl+`/customers/login/`, formData)
     .then(function (response) {
-      console.log(response);
+      if (response.data.bool===false){
+        setFormError(true)
+        setErrorMsg(response.data.msg)
+      }else{
+        localStorage.setItem('customer_login', true)
+        localStorage.setItem('customer_username', response.data.user)
+        setFormError(false)
+        setErrorMsg('')
+      }
+          
     })
     .catch(function (error) {
       console.log(error);
@@ -42,7 +53,11 @@ function Login(props) {
    
 
             <div className="container mt-4">
+               
               <h3 className="mb-4">Login</h3>
+              {formError && 
+                <p className="text-danger">{errorMsg}</p>
+                }
               <form>
 
                 <div className="mb-3">
@@ -55,6 +70,8 @@ function Login(props) {
                 </div>
                
                 <button type="button" disabled={!buttonEnable} onClick={submitHandler} className="btn btn-primary">Submit</button>
+
+               
               </form>
             </div>
   
