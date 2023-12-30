@@ -33,11 +33,13 @@ function Register(props) {
     formData.append('email', registerFormData.email)
     formData.append('password', registerFormData.password)
     formData.append('mobile', registerFormData.mobile)
-    console.log(formData)
+    // console.log(formData)
 
     axios.post(baseUrl+`/customers/register/`, formData)
     .then(function (response) {
       if (response.data.bool===false){
+        // console.log(response.data.msg)
+
         setFormError(true)
         setErrorMsg(response.data.msg)
         setSuccessMsg('')
@@ -70,6 +72,7 @@ function Register(props) {
   && (registerFormData.username != '')
   && (registerFormData.email != '')
   && (registerFormData.password != '')
+  && (registerFormData.mobile != '')
 // Register
     return (
    
@@ -77,6 +80,7 @@ function Register(props) {
             <div className="container mt-4">
               <h3 className="mb-4">Register</h3>
               {!buttonEnable && <p className="text-muted"><strong>Note:</strong> All fields are required</p> }
+               {formError && <p className="text-danger"> {errorMsg}</p>} 
                <p className="text-success"> {successMsg}</p> 
                
               <form>
