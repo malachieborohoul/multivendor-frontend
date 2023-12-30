@@ -58,30 +58,30 @@ function Register(props) {
               <form>
                 <div className="mb-3">
                   <label for="fistname" className="form-label">First Name</label>
-                  <input type="text" name="fistname" className="form-control" id="fistname" aria-describedby="emailHelp"/>
+                  <input type="text" name="fistname" className="form-control" id="fistname" onChange={inputHandler} value={registerFormData.fistname} aria-describedby="emailHelp"/>
                 </div>
 
                 <div className="mb-3">
                   <label for="lastname" className="form-label">Last Name</label>
-                  <input type="text" name="lastname" className="form-control" id="lastname" aria-describedby="emailHelp"/>
+                  <input type="text" name="lastname" className="form-control" id="lastname" onChange={inputHandler} value={registerFormData.lastname} aria-describedby="emailHelp"/>
                 </div>
 
 
                 <div className="mb-3">
                   <label for="username" className="form-label">Username</label>
-                  <input type="text" name="username" className="form-control" id="username" aria-describedby="emailHelp"/>
+                  <input type="text" name="username" className="form-control" id="username" onChange={inputHandler} value={registerFormData.username} aria-describedby="emailHelp"/>
                 </div>
 
                 <div className="mb-3">
                   <label for="email" className="form-label">Email</label>
-                  <input type="email" name="email" className="form-control" id="email" aria-describedby="emailHelp"/>
+                  <input type="email" name="email" className="form-control" id="email" onChange={inputHandler} value={registerFormData.email} aria-describedby="emailHelp"/>
                 </div>
                 <div className="mb-3">
                   <label for="password" className="form-label">Password</label>
-                  <input type="password" className="form-control" id="password"/>
+                  <input type="password" className="form-control" id="password" onChange={inputHandler} value={registerFormData.password}/>
                 </div>
                
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" onClick={submitHandler} className="btn btn-primary">Submit</button>
               </form>
             </div>
   
