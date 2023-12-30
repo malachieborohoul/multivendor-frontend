@@ -1,6 +1,13 @@
 import { Link} from 'react-router-dom'
+import { UserContext } from '../Context'
+import { useContext,  } from 'react'
 
 function Header() { 
+  const userContext=useContext(UserContext)
+
+  console.log(userContext)
+
+  console.log(useContext)
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-success">
         <div className="container">
