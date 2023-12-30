@@ -40,6 +40,7 @@ function Register(props) {
       if (response.data.bool===false){
         setFormError(true)
         setErrorMsg(response.data.msg)
+        setSuccessMsg('')
       }else{
         console.log(response.data.user)
        setRegisterFormData({
@@ -53,6 +54,8 @@ function Register(props) {
         // localStorage.setItem('customer_login', true)
         // localStorage.setItem('customer_username', response.data.user)
         setFormError(false)
+        setErrorMsg('')
+
         setSuccessMsg(response.data.msg)
       }
           
