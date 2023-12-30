@@ -53,7 +53,6 @@ function Header() {
                   </>
                   }
          
-                    <li><hr class="dropdown-divider"/></li>
                     <li><Link class="dropdown-item" to="/customer/dashboard">Dashboard</Link></li>
                     {userContext && <li><Link  class="dropdown-item" to="/customer/logout">Logout</Link></li>}
                     
