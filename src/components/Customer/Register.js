@@ -50,6 +50,13 @@ function Register(props) {
       console.log(error);
     });
   }
+
+  const buttonEnable=(registerFormData.fistname != '') 
+  && (registerFormData.lastname != '')
+  && (registerFormData.username != '')
+  && (registerFormData.email != '')
+  && (registerFormData.password != '')
+
     return (
    
 
@@ -78,10 +85,10 @@ function Register(props) {
                 </div>
                 <div className="mb-3">
                   <label for="password" className="form-label">Password</label>
-                  <input type="password" className="form-control" id="password" onChange={inputHandler} value={registerFormData.password}/>
+                  <input type="password" name="password" className="form-control" id="password" onChange={inputHandler} value={registerFormData.password}/>
                 </div>
                
-                <button type="submit" onClick={submitHandler} className="btn btn-primary">Submit</button>
+                <button type="submit" disabled={!buttonEnable} onClick={submitHandler} className="btn btn-primary">Submit</button>
               </form>
             </div>
   
