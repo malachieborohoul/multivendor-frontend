@@ -34,6 +34,7 @@ function Login(props) {
         setFormError(true)
         setErrorMsg(response.data.msg)
       }else{
+        console.log(response.data.user)
         localStorage.setItem('customer_login', true)
         localStorage.setItem('customer_username', response.data.user)
         setFormError(false)
@@ -51,9 +52,9 @@ function Login(props) {
   const checkCustomer= 
   localStorage.getItem('customer_login')
 
-  if (checkCustomer){
-    window.location.href='/customer/dashboard'
-  }
+  // if (checkCustomer){
+  //   window.location.href='/customer/dashboard'
+  // }
   // console.log(loginFormData)
     return (
    
