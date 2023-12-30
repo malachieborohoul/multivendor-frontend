@@ -17,6 +17,7 @@ function Register(props) {
   }) 
   const[formError, setFormError]=useState(false)
   const[errorMsg, setErrorMsg]=useState('')
+  const[successMsg, setSuccessMsg]=useState('')
 
   const inputHandler=(event)=>{
     setRegisterFormData({
@@ -52,7 +53,7 @@ function Register(props) {
         // localStorage.setItem('customer_login', true)
         // localStorage.setItem('customer_username', response.data.user)
         setFormError(false)
-        setErrorMsg('')
+        setSuccessMsg(response.data.msg)
       }
           
     })
@@ -73,6 +74,7 @@ function Register(props) {
             <div className="container mt-4">
               <h3 className="mb-4">Register</h3>
               {!buttonEnable && <p className="text-muted"><strong>Note:</strong> All fields are required</p> }
+               <p className="text-success"> {successMsg}</p> 
                
               <form>
                 <div className="mb-3">
