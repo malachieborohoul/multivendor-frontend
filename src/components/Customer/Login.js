@@ -24,6 +24,8 @@ function Login(props) {
     console.log(formData)
   }
 
+  const buttonEnable=(loginFormData.username != '') && (loginFormData.password != '')
+
   // console.log(loginFormData)
     return (
    
@@ -41,7 +43,7 @@ function Login(props) {
                   <input type="password" className="form-control" name="password" id="password" value={loginFormData.password} onChange={inputHandler}/>
                 </div>
                
-                <button type="button" onClick={submitHandler} className="btn btn-primary">Submit</button>
+                <button type="button" disabled={!buttonEnable} onClick={submitHandler} className="btn btn-primary">Submit</button>
               </form>
             </div>
   
