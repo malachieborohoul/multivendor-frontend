@@ -91,9 +91,9 @@ function Register(props) {
                   <label for="password" className="form-label">Password</label>
                   <input type="password" name="password" className="form-control" id="password" onChange={inputHandler} value={registerFormData.password}/>
                 </div>
-
+                
                 <div className="mb-3">
-                  <label for="mobile" className="form-label">Mobile</label>
+                  <label for="number" className="form-label">Mobile</label>
                   <input type="password" name="text" className="form-control" id="mobile" onChange={inputHandler} value={registerFormData.mobile}/>
                 </div>
                
