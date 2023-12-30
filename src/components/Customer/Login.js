@@ -48,7 +48,12 @@ function Login(props) {
 
   const buttonEnable=(loginFormData.username != '') && (loginFormData.password != '')
 
-  console.log(localStorage.getItem('customer_login'))
+  checkCustomer= 
+  localStorage.getItem('customer_login')
+
+  if (checkCustomer){
+    
+  }
   // console.log(loginFormData)
     return (
    
