@@ -62,7 +62,7 @@ function Register(props) {
 
             <div className="container mt-4">
               <h3 className="mb-4">Register</h3>
-              {!buttonEnable &&  <p className="text-muted">Note: All fields are required</p> }
+              {!buttonEnable && <p className="text-muted"><strong>Note:</strong> All fields are required</p> }
                
               <form>
                 <div className="mb-3">
