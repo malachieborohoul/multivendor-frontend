@@ -1,7 +1,20 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
+import { useState } from "react";
+import axios from 'axios'
 
 function Register(props) {
+  const baseUrl = 'http://127.0.0.1:8000/api';
+
+
+  const[registerFormData, setRegisterFormData]=useState({
+    'fistname':'',
+    'lastname':'',
+    'email':'',
+    'password':'',
+  }) 
+  const[formError, setFormError]=useState(false)
+  const[errorMsg, setErrorMsg]=useState('')
     return (
    
 
@@ -10,17 +23,17 @@ function Register(props) {
               <form>
                 <div className="mb-3">
                   <label for="fistname" className="form-label">First Name</label>
-                  <input type="text" className="form-control" id="fistname" aria-describedby="emailHelp"/>
+                  <input type="text" name="fistname" className="form-control" id="fistname" aria-describedby="emailHelp"/>
                 </div>
 
                 <div className="mb-3">
                   <label for="lastname" className="form-label">Last Name</label>
-                  <input type="text" className="form-control" id="lastname" aria-describedby="emailHelp"/>
+                  <input type="text" name="lastname" className="form-control" id="lastname" aria-describedby="emailHelp"/>
                 </div>
 
                 <div className="mb-3">
                   <label for="email" className="form-label">Email</label>
-                  <input type="email" className="form-control" id="email" aria-describedby="emailHelp"/>
+                  <input type="email" name="email" className="form-control" id="email" aria-describedby="emailHelp"/>
                 </div>
                 <div className="mb-3">
                   <label for="password" className="form-label">Password</label>
