@@ -13,6 +13,7 @@ function Register(props) {
     'username':'',
     'email':'',
     'password':'',
+    'mobile':'',
   }) 
   const[formError, setFormError]=useState(false)
   const[errorMsg, setErrorMsg]=useState('')
@@ -30,6 +31,7 @@ function Register(props) {
     formData.append('username', registerFormData.username)
     formData.append('email', registerFormData.email)
     formData.append('password', registerFormData.password)
+    formData.append('mobile', registerFormData.mobile)
     // console.log(formData)
 
     axios.post(baseUrl+`/customers/register/`, formData)
@@ -88,6 +90,11 @@ function Register(props) {
                 <div className="mb-3">
                   <label for="password" className="form-label">Password</label>
                   <input type="password" name="password" className="form-control" id="password" onChange={inputHandler} value={registerFormData.password}/>
+                </div>
+
+                <div className="mb-3">
+                  <label for="mobile" className="form-label">Mobile</label>
+                  <input type="password" name="text" className="form-control" id="mobile" onChange={inputHandler} value={registerFormData.mobile}/>
                 </div>
                
                 <button type="submit" disabled={!buttonEnable} onClick={submitHandler} className="btn btn-primary">Submit</button>
