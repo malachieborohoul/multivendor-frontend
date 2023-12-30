@@ -23,7 +23,9 @@ function Login(props) {
     formData.append('password', loginFormData.password)
     console.log(formData)
 
-    axios.post(baseUrl+`/customers/login`, formData)
+    axios.post(baseUrl+`/customers/login`, formData).then((response)=>{
+      console.log(response)
+    })
   }
 
   const buttonEnable=(loginFormData.username != '') && (loginFormData.password != '')
