@@ -16,6 +16,40 @@ function Register(props) {
   }) 
   const[formError, setFormError]=useState(false)
   const[errorMsg, setErrorMsg]=useState('')
+
+  const inputHandler=(event)=>{
+    setRegisterFormData({
+      ...registerFormData,[event.target.name]:event.target.value
+    })
+  }
+
+  const submitHandler=(event)=>{
+    const formData = new FormData()
+    formData.append('fistname', registerFormData.fistname)
+    formData.append('lastname', registerFormData.lastname)
+    formData.append('username', registerFormData.username)
+    formData.append('email', registerFormData.email)
+    formData.append('password', registerFormData.password)
+    // console.log(formData)
+
+    axios.post(baseUrl+`/customers/register/`, formData)
+    .then(function (response) {
+      if (response.data.bool===false){
+        setFormError(true)
+        setErrorMsg(response.data.msg)
+      }else{
+        console.log(response.data.user)
+        localStorage.setItem('customer_login', true)
+        localStorage.setItem('customer_username', response.data.user)
+        setFormError(false)
+        setErrorMsg('')
+      }
+          
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
     return (
    
 
