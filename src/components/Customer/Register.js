@@ -10,6 +10,7 @@ function Register(props) {
   const[registerFormData, setRegisterFormData]=useState({
     'fistname':'',
     'lastname':'',
+    'username':'',
     'email':'',
     'password':'',
   }) 
@@ -29,6 +30,12 @@ function Register(props) {
                 <div className="mb-3">
                   <label for="lastname" className="form-label">Last Name</label>
                   <input type="text" name="lastname" className="form-control" id="lastname" aria-describedby="emailHelp"/>
+                </div>
+
+
+                <div className="mb-3">
+                  <label for="username" className="form-label">Username</label>
+                  <input type="text" name="username" className="form-control" id="username" aria-describedby="emailHelp"/>
                 </div>
 
                 <div className="mb-3">
