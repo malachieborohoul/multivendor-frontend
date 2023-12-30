@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../logo.svg";
 import { useState } from "react";
-
+import axios from 'axios'
 
 
 
@@ -22,6 +22,8 @@ function Login(props) {
     formData.append('username', loginFormData.username)
     formData.append('password', loginFormData.password)
     console.log(formData)
+
+    axios.post(baseUrl+`/customers/login`, formData)
   }
 
   const buttonEnable=(loginFormData.username != '') && (loginFormData.password != '')
