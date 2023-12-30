@@ -36,7 +36,8 @@ import Reports from './components/Seller/Reports';
 import VendorChangePassword from './components/Seller/VendorChangePassword';
 import VendorProfile from './components/Seller/VendorProfile';
 import TagProducts from './components/TagProducts';
-import Logout from './components/Customer/Logout';
+import Logout from './components/Customer/CustomerLogout';
+import CustomerLogout from './components/Customer/CustomerLogout';
 // 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/customer/register' element={<Register/>}/>
         <Route path='/customer/login' element={<Login/>}/>
-        <Route path='/customer/logout' element={<Logout/>}/>
+        <Route path='/customer/logout' element={<CustomerLogout/>}/>
         <Route path='/customer/dashboard' element={<Dashboard/>}/>
         <Route path='/customer/orders' element={<Orders/>}/>
         <Route path='/customer/wishlist' element={<Wishlist/>}/>
