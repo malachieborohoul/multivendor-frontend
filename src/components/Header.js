@@ -3,7 +3,7 @@ import { UserContext } from '../Context'
 import { useContext,  } from 'react'
 
 function Header() { 
-  // userContextuse
+  // userContextus
   const userContext=useContext(UserContext)
 
   console.log(userContext)
