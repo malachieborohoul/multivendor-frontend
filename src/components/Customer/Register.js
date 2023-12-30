@@ -8,7 +8,7 @@ function Register(props) {
 
 
   const[registerFormData, setRegisterFormData]=useState({
-    'fistname':'',
+    'firstname':'',
     'lastname':'',
     'username':'',
     'email':'',
@@ -26,13 +26,13 @@ function Register(props) {
 
   const submitHandler=(event)=>{
     const formData = new FormData()
-    formData.append('fistname', registerFormData.fistname)
+    formData.append('firstname', registerFormData.firstname)
     formData.append('lastname', registerFormData.lastname)
     formData.append('username', registerFormData.username)
     formData.append('email', registerFormData.email)
     formData.append('password', registerFormData.password)
     formData.append('mobile', registerFormData.mobile)
-    // console.log(formData)
+    console.log(formData)
 
     axios.post(baseUrl+`/customers/register/`, formData)
     .then(function (response) {
@@ -53,7 +53,7 @@ function Register(props) {
     });
   }
 
-  const buttonEnable=(registerFormData.fistname != '') 
+  const buttonEnable=(registerFormData.firstname != '') 
   && (registerFormData.lastname != '')
   && (registerFormData.username != '')
   && (registerFormData.email != '')
@@ -68,8 +68,8 @@ function Register(props) {
                
               <form>
                 <div className="mb-3">
-                  <label for="fistname" className="form-label">First Name</label>
-                  <input type="text" name="fistname" className="form-control" id="fistname" onChange={inputHandler} value={registerFormData.fistname} aria-describedby="emailHelp"/>
+                  <label for="firstname" className="form-label">First Name</label>
+                  <input type="text" name="firstname" className="form-control" id="firstname" onChange={inputHandler} value={registerFormData.firstname} aria-describedby="emailHelp"/>
                 </div>
 
                 <div className="mb-3">
@@ -91,13 +91,13 @@ function Register(props) {
                   <label for="password" className="form-label">Password</label>
                   <input type="password" name="password" className="form-control" id="password" onChange={inputHandler} value={registerFormData.password}/>
                 </div>
-                
+
                 <div className="mb-3">
-                  <label for="number" className="form-label">Mobile</label>
-                  <input type="password" name="text" className="form-control" id="mobile" onChange={inputHandler} value={registerFormData.mobile}/>
+                  <label for="mobile" className="form-label">Mobile</label>
+                  <input type="number" name="mobile" className="form-control" id="mobile" onChange={inputHandler} value={registerFormData.mobile}/>
                 </div>
                
-                <button type="submit" disabled={!buttonEnable} onClick={submitHandler} className="btn btn-primary">Submit</button>
+                <button type="button" disabled={!buttonEnable} onClick={submitHandler} className="btn btn-primary">Submit</button>
               </form>
             </div>
   
