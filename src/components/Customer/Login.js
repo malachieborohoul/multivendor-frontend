@@ -17,7 +17,15 @@ function Login(props) {
     })
   }
 
-  console.log(loginFormData)
+  const submitHandler=(event)=>{
+    event.preventDefault()
+    const formData = new FormData()
+    formData.append('username', loginFormData.username)
+    formData.append('password', loginFormData.password)
+    console.log(formData)
+  }
+
+  // console.log(loginFormData)
     return (
    
 
@@ -34,7 +42,7 @@ function Login(props) {
                   <input type="password" className="form-control" name="password" id="password" value={loginFormData.password} onChange={inputHandler}/>
                 </div>
                
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="button" onClick={submitHandler} className="btn btn-primary">Submit</button>
               </form>
             </div>
   
