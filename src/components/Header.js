@@ -45,7 +45,7 @@ function Header() {
                     My Account
                 </a>
                 <ul class="dropdown-menu">
-                  {userContext && 
+                  {!userContext && 
                   <>
                       <li><Link class="dropdown-item" to="/customer/register">Register</Link></li>
                       <li><Link class="dropdown-item" to="/customer/login">Login</Link></li>
@@ -54,7 +54,7 @@ function Header() {
          
                     <li><hr class="dropdown-divider"/></li>
                     <li><Link class="dropdown-item" to="/customer/dashboard">Dashboard</Link></li>
-                    {!userContext && <li><Link  class="dropdown-item" to="/customer/logout">Logout</Link></li>}
+                    {userContext && <li><Link  class="dropdown-item" to="/customer/logout">Logout</Link></li>}
                     
                 </ul>
                 </li> 
