@@ -41,8 +41,16 @@ function Register(props) {
         setErrorMsg(response.data.msg)
       }else{
         console.log(response.data.user)
-        localStorage.setItem('customer_login', true)
-        localStorage.setItem('customer_username', response.data.user)
+       setRegisterFormData({
+          'firstname':'',
+          'lastname':'',
+          'username':'',
+          'email':'',
+          'password':'',
+          'mobile':'',
+        }) 
+        // localStorage.setItem('customer_login', true)
+        // localStorage.setItem('customer_username', response.data.user)
         setFormError(false)
         setErrorMsg('')
       }
