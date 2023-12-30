@@ -58,7 +58,7 @@ function Register(props) {
   && (registerFormData.username != '')
   && (registerFormData.email != '')
   && (registerFormData.password != '')
-
+// Register
     return (
    
 
