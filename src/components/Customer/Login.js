@@ -48,11 +48,11 @@ function Login(props) {
 
   const buttonEnable=(loginFormData.username != '') && (loginFormData.password != '')
 
-  checkCustomer= 
+  const checkCustomer= 
   localStorage.getItem('customer_login')
 
   if (checkCustomer){
-    
+    window.location.href='/customer/dashboard'
   }
   // console.log(loginFormData)
     return (
