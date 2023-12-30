@@ -6,6 +6,9 @@ import axios from 'axios'
 
 
 function Login(props) {
+  const baseUrl = 'http://127.0.0.1:8000/api';
+
+
   const[loginFormData, setLoginFormData]=useState({
     'username':'',
     'password':''
@@ -23,9 +26,13 @@ function Login(props) {
     formData.append('password', loginFormData.password)
     console.log(formData)
 
-    axios.post(baseUrl+`/customers/login`, formData).then((response)=>{
-      console.log(response)
+    axios.post(baseUrl+`/customers/login/`, formData)
+    .then(function (response) {
+      console.log(response);
     })
+    .catch(function (error) {
+      console.log(error);
+    });
   }
 
   const buttonEnable=(loginFormData.username != '') && (loginFormData.password != '')
