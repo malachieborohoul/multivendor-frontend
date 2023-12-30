@@ -24,7 +24,7 @@ function Login(props) {
     const formData = new FormData()
     formData.append('username', loginFormData.username)
     formData.append('password', loginFormData.password)
-    console.log(formData)
+    // console.log(formData)
 
     axios.post(baseUrl+`/customers/login/`, formData)
     .then(function (response) {
