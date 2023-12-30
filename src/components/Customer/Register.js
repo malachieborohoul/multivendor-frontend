@@ -38,7 +38,7 @@ function Register(props) {
     axios.post(baseUrl+`/customers/register/`, formData)
     .then(function (response) {
       if (response.data.bool===false){
-        // console.log(response.data.msg)
+        console.log(response.data.msg)
 
         setFormError(true)
         setErrorMsg(response.data.msg)
