@@ -18,7 +18,6 @@ function Login(props) {
   }
 
   const submitHandler=(event)=>{
-    event.preventDefault()
     const formData = new FormData()
     formData.append('username', loginFormData.username)
     formData.append('password', loginFormData.password)
