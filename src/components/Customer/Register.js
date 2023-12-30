@@ -62,6 +62,9 @@ function Register(props) {
 
             <div className="container mt-4">
               <h3 className="mb-4">Register</h3>
+              {formError && 
+                <p className="text-danger">{errorMsg}</p>
+                }
               <form>
                 <div className="mb-3">
                   <label for="fistname" className="form-label">First Name</label>
