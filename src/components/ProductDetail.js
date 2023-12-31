@@ -48,32 +48,32 @@ function fetchRelatedData(baseurl){
 
 
 const cartAddButtonHandler= ()=>{
-  // let previousCart =  localStorage.getItem('cartData')
-  // let cartJson=JSON.parse(previousCart)
-  // const cartData =[
-  //   {
-  //     'product':  {
-  //       'id': productData.id,
-  //       'title': productData.title
-  //     },
-  //     'user':{
-  //       'id': 1
-  //     }
+  var previousCart =  localStorage.getItem('cartData')
+  var cartJson=JSON.parse(previousCart)
+  const cartData =[
+    {
+      'product':  {
+        'id': productData.id,
+        'title': productData.title
+      },
+      'user':{
+        'id': 1
+      }
 
-  //   }
+    }
     
-  // ]
-  // if(cartData != null){
-  //   cartJson.push(cartData)
+  ]
+  if(cartJson != null){
+    cartJson.push(cartData)
 
-  //   var cartString = JSON.stringify(cartJson)
-  //   localStorage.setItem('cartData', cartString)
-  // }else{
-  //   var newCartList = []
-  //   newCartList.push(cartData)
-  //   var cartString = JSON.stringify(newCartList)
-  //   localStorage.setItem('cartData', cartString)
-  // }
+    var cartString = JSON.stringify(cartJson)
+    localStorage.setItem('cartData', cartString)
+  }else{
+    var newCartList = []
+    newCartList.push(cartData)
+    var cartString = JSON.stringify(newCartList)
+    localStorage.setItem('cartData', cartString)
+  }
 
   
   setCartButtonClickStatus(true)
