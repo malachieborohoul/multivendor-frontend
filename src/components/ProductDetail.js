@@ -103,7 +103,8 @@ const cartRemoveButtonHandler= ()=>{
 
   cartJson.map((cart, index)=>{
     if(cart!=null && cart.product.id==productData.id){
-      delete cartJson[index]
+      // delete cartJson[index]
+      cartJson.splice(index,1)
     }
   })
 

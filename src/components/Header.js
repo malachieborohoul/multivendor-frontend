@@ -75,7 +75,7 @@ function Header() {
 
                 <li className="nav-item">
                 <Link className="nav-link" to="/checkout">
-                  My Cart (4)
+                  My Cart ({cartData.length})
                 </Link>
               </li>
             </ul>
