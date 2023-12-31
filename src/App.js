@@ -38,11 +38,13 @@ import VendorProfile from './components/Seller/VendorProfile';
 import TagProducts from './components/TagProducts';
 import Logout from './components/Customer/CustomerLogout';
 import CustomerLogout from './components/Customer/CustomerLogout';
+import { CartContext } from './Context';
 // 
 function App() {
   return (
     <>
-      <Header/> 
+    <CartContext.Provider value={{cartData, setCartData}}>
+    <Header/> 
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/categories' element={<Categories/>}/>
@@ -84,6 +86,8 @@ function App() {
         
       </Routes>
       <Footer/>
+    </CartContext.Provider>
+     
 
     </>
   );
