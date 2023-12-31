@@ -3,7 +3,7 @@ import { CartContext, UserContext } from '../Context'
 import { useContext,  } from 'react'
 
 function Header() { 
-  // HeaderHeaderHeaderHeaderHeade
+  // HeaderHeaderHeaderHeaderHead
   const userContext=useContext(UserContext)
   const {cartData, setCartData}= useContext(CartContext)
 
