@@ -18,7 +18,24 @@ let {slug,id}= useParams()
 useEffect(()=>{
   fetchData(baseUrl+`/products/${id}/`);
   fetchRelatedData(baseUrl+`/related-products/${id}/`);
+  checkProductInCart(id)
 },[])
+function checkProductInCart(product_id) {
+  var previousCart = localStorage.getItem('cartData')
+  var cartJson=JSON.parse(previousCart)
+
+  if(cartJson != null){
+    cartJson.map((cart, index)=>{
+      if(cart!=null && cart.product.id==product_id){
+        setCartButtonClickStatus(true) 
+  
+      }
+    })
+  
+  }
+
+}
+
 function fetchData(baseurl){
   axios.get(baseurl)
   .then((response)=>{
