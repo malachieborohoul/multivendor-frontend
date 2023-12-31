@@ -3,7 +3,7 @@ import logo from "../../logo.svg";
 import { useState } from "react";
 import axios from 'axios'
 
-// LoginLoginLoginLoginLoginLoginLo
+// LoginLoginLoginLoginLoginLoginL
 
 function Login(props) {
   const baseUrl = 'http://127.0.0.1:8000/api';
