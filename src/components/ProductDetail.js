@@ -50,7 +50,7 @@ function fetchRelatedData(baseurl){
 const cartAddButtonHandler= ()=>{
   var previousCart =  localStorage.getItem('cartData')
   var cartJson=JSON.parse(previousCart)
-  const cartData =[
+  const cartData =
     {
       'product':  {
         'id': productData.id,
@@ -62,7 +62,7 @@ const cartAddButtonHandler= ()=>{
 
     }
     
-  ]
+  
   if(cartJson != null){
     cartJson.push(cartData)
 
