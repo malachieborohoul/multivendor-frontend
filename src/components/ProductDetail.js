@@ -48,15 +48,34 @@ function fetchRelatedData(baseurl){
 
 
 const cartAddButtonHandler= ()=>{
+  const cartData =[
+    {
+      'product':  {
+        'id': productData.id,
+        'title': productData.title
+      },
+      'user':{
+        'id': 1
+      }
+
+    }
+    
+  ]
+
+  let cartString =JSON.stringify(cartData )
+  localStorage.setItem('cartData',cartString)
   setCartButtonClickStatus(true)
+
 }
 
 const cartRemoveButtonHandler= ()=>{
+  localStorage.removeItem('cartData')
+
   setCartButtonClickStatus(false)
 }
   return (
     <section className="container mt-4">
-      <div className="row">
+      <div className="row"> 
         <div className="col-4">
         <div id="productThumbnailsSlider" className="carousel carousel-dark slide  border" data-bs-ride="true ">
         <div className="carousel-indicators">
