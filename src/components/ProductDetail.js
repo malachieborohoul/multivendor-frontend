@@ -70,11 +70,12 @@ const cartAddButtonHandler= ()=>{
     localStorage.setItem('cartData', cartString)
   }else{
     var newCartList = []
+    newCartList.push(cartData)
+    var cartString = JSON.stringify(newCartList)
+    localStorage.setItem('cartData', cartString)
   }
 
-  let allCartData = cartJson.push(cartData)
-  let cartString =JSON.stringify(allCartData )
-  localStorage.setItem('cartData',cartString)
+  
   setCartButtonClickStatus(true)
 
 }
