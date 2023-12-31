@@ -48,6 +48,8 @@ function fetchRelatedData(baseurl){
 
 
 const cartAddButtonHandler= ()=>{
+  let previousCart =  localStorage.getItem('cartData')
+  let cartJson=JSON.parse(previousCart)
   const cartData =[
     {
       'product':  {
@@ -61,8 +63,17 @@ const cartAddButtonHandler= ()=>{
     }
     
   ]
+  if(cartData != null){
+    cartJson.push(cartData)
 
-  let cartString =JSON.stringify(cartData )
+    var cartString = JSON.stringify(cartJson)
+    localStorage.setItem('cartData', cartString)
+  }else{
+    var newCartList = []
+  }
+
+  let allCartData = cartJson.push(cartData)
+  let cartString =JSON.stringify(allCartData )
   localStorage.setItem('cartData',cartString)
   setCartButtonClickStatus(true)
 
