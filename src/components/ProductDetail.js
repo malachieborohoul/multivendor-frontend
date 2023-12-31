@@ -11,6 +11,9 @@ const [productData, setProductData]=useState([])
 const [productImgs, setProductImgs]=useState([])
 const [productTags, setProductTags]=useState([])
 const [relatedProducts, setRelatedProducts]=useState([])
+
+const [cartButtonClickStatus, setCartButtonClickStatus]=useState(false)
+
 let {slug,id}= useParams() 
 useEffect(()=>{
   fetchData(baseUrl+`/products/${id}/`);
@@ -43,6 +46,14 @@ function fetchRelatedData(baseurl){
  
 }
 
+
+const cartAddButtonHandler= ()=>{
+  setCartButtonClickStatus(true)
+}
+
+const cartRemoveButtonHandler= ()=>{
+  setCartButtonClickStatus(false)
+}
   return (
     <section className="container mt-4">
       <div className="row">
@@ -99,7 +110,8 @@ function fetchRelatedData(baseurl){
           <h5 className="card-title">Price Rs 500</h5>
           <p className="mt-3">
             <Link title="Add to cart" target="_blank" className="btn btn-dark ms-1"><i className="fa fa-cart-plus" aria-hidden="true"></i> Demo</Link>
-            <Link title="Add to cart" className="btn btn-primary ms-1"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to Cart</Link>
+          {!cartButtonClickStatus && <Link title="Add to cart" type="button" onClick={cartAddButtonHandler} className="btn btn-primary ms-1"><i className="fa fa-cart-plus" aria-hidden="true"></i> Add to Cart</Link>}  
+          {cartButtonClickStatus && <Link title="Remove to cart" type="button" onClick={cartRemoveButtonHandler} className="btn btn-danger ms-1"><i className="fa fa-cart-plus" aria-hidden="true"></i> Remove to cart</Link>}  
             <Link title="Add to cart" className="btn btn-success ms-1 "><i className="fa fa-bag-shopping" aria-hidden="true"></i> Buy Now</Link>
             <Link title="Add to Wishlist" className="btn btn-danger ms-1 "><i className="fa fa-heart" aria-hidden="true"></i> Wishlist</Link>
           </p>
