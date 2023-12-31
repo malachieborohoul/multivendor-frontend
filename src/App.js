@@ -39,8 +39,13 @@ import TagProducts from './components/TagProducts';
 import Logout from './components/Customer/CustomerLogout';
 import CustomerLogout from './components/Customer/CustomerLogout';
 import { CartContext } from './Context';
+import { useState } from 'react';
 // 
+
+const checkCart = localStorage.getItem('cartData')
 function App() {
+
+  const [cartData, setCartData]=useState(JSON.parse(checkCart))
   return (
     <>
     <CartContext.Provider value={{cartData, setCartData}}>
