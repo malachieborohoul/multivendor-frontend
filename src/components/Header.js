@@ -1,10 +1,11 @@
 import { Link} from 'react-router-dom'
-import { UserContext } from '../Context'
+import { CartContext, UserContext } from '../Context'
 import { useContext,  } from 'react'
 
 function Header() { 
   // 
   const userContext=useContext(UserContext)
+  const {cartData, setCartData}= useContext(CartContext)
 
   console.log(userContext)
 
